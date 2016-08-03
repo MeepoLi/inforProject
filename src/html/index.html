@@ -1,0 +1,54 @@
+<!--
+/**
+ * Urbane
+ * index.html
+ */
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Commentary Dashboard</title>
+
+    <!--Lib includes -->
+    <link rel="stylesheet" href="qrc:/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="qrc:/css/d3.parcoords.css"  type="text/css" />
+    <!---->
+    <script type="text/javascript" src="qrc:/js/jquery-2.1.4.js"    ></script>
+    <script type="text/javascript" src="qrc:/js/bootstrap.js"       ></script>
+    <script type="text/javascript" src="qrc:/js/d3.js"              ></script>
+    <script type="text/javascript" src="qrc:/js/underscore.js"      ></script>
+    <script type="text/javascript" src="qrc:/js/underscore.math.js" ></script>
+
+    <!--Color Commentary Dashboard source files -->
+    <script type="text/javascript" src="qrc:/qml/QChart.js"   ></script>
+    <script type="text/javascript" src="qrc:/qml/QChartGallery.js"  ></script>
+    <script type="text/javascript" src="qrc:/src/mainMenu.js" ></script>
+    <!---->
+    <link rel="stylesheet" href="qrc:/css/urbane.css"   type="text/css" />
+
+</head>
+<body class="nc">
+<!-- Main Menu -->
+<div id="mainMenu" class="navbar navbar-default navbar-fixed-top">
+    <div id="modeSelector" class="col-lg-12 text-center">
+        <div id="modeOptions" class="btn-group btn-group-sm" role="group" aria-label="...">
+            <button id="opA" type="button" class="btn btn-default active">Test01</button>
+            <button id="opB" type="button" class="btn btn-default">Test02</button>
+        </div
+    </div>
+</div>
+<!-- Main Content-->
+<div class="container-fluid">
+    <!-- Main Grid -->
+    <div class="row">
+        <!-- parallel coordinates -->
+        <div id="parallel" class="col-lg-12 text-center">
+        </div>
+        <!-- data table -->
+        <div id="table" class="col-lg-12 text-center">
+        </div>
+    </div>
+</div>
+</body>
+</html>

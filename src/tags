@@ -1,0 +1,820 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AR	Makefile	/^AR            = \/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/bin\/ar cq$/;"	m
+AR	qml/Makefile	/^AR            = \/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/bin\/ar cq$/;"	m
+BASEGUI_H	basegui.hpp	/^#define BASEGUI_H$/;"	d
+Bar	qml/QChart.js	/^    var Bar = function(data, config, ctx) {$/;"	c
+Bar.calculateDrawingSizes	qml/QChart.js	/^        function calculateDrawingSizes() {$/;"	f
+Bar.calculateOffset	qml/QChart.js	/^    function calculateOffset(val,calculatedScale,scaleHop) {$/;"	f
+Bar.calculateOrderOfMagnitude	qml/QChart.js	/^        function calculateOrderOfMagnitude(val) {$/;"	f
+Bar.calculateScale	qml/QChart.js	/^    function calculateScale(drawingHeight,maxSteps,minSteps,maxValue,minValue,labelTemplateString) {$/;"	f
+Bar.calculateXAxisSize	qml/QChart.js	/^        function calculateXAxisSize() {$/;"	f
+Bar.clear	qml/QChart.js	/^    var clear = function(c) {$/;"	m
+Bar.draw	qml/QChart.js	/^        this.draw = function (progress) {$/;"	m
+Bar.drawBars	qml/QChart.js	/^        function drawBars(animPc) {$/;"	f
+Bar.drawScale	qml/QChart.js	/^        function drawScale() {$/;"	f
+Bar.getValueBounds	qml/QChart.js	/^        function getValueBounds() {$/;"	f
+Bar.init	qml/QChart.js	/^        this.init = function () {$/;"	m
+BaseGui	basegui.hpp	/^class BaseGui$/;"	c
+CAMERA_HPP	Camera.hpp	/^#define CAMERA_HPP$/;"	d
+CAMERA_INTERACTOR_HPP	CameraInteractor.hpp	/^#define CAMERA_INTERACTOR_HPP$/;"	d
+CAMERA_MATRIX	Camera.hpp	/^#define CAMERA_MATRIX(/;"	d
+CC	Makefile	/^CC            = \/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/bin\/clang$/;"	m
+CC	qml/Makefile	/^CC            = \/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/bin\/clang$/;"	m
+CFLAGS	Makefile	/^CFLAGS        = -pipe -O2 -isysroot \/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX10.9.sdk -mmacosx-version-min=10.7 -Wall -W -fPIC $(DEFINES)$/;"	m
+CFLAGS	qml/Makefile	/^CFLAGS        = -pipe -O2 -isysroot \/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX10.9.sdk -mmacosx-version-min=10.7 -Wall -W -fPIC $(DEFINES)$/;"	m
+CHARTVIEW_H	ChartView.hpp	/^#define CHARTVIEW_H$/;"	d
+CHK_DIR_EXISTS	Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+CHK_DIR_EXISTS	qml/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+COMPRESS	Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COMPRESS	qml/Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COPY	Makefile	/^COPY          = cp -f$/;"	m
+COPY	qml/Makefile	/^COPY          = cp -f$/;"	m
+COPY_DIR	Makefile	/^COPY_DIR      = cp -f -R$/;"	m
+COPY_DIR	qml/Makefile	/^COPY_DIR      = cp -f -R$/;"	m
+COPY_FILE	Makefile	/^COPY_FILE     = cp -f$/;"	m
+COPY_FILE	qml/Makefile	/^COPY_FILE     = cp -f$/;"	m
+CXX	Makefile	/^CXX           = \/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/bin\/clang++$/;"	m
+CXX	qml/Makefile	/^CXX           = \/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/bin\/clang++$/;"	m
+CXXFLAGS	Makefile	/^CXXFLAGS      = -pipe -I\/usr\/local\/opt\/qt5\/include -stdlib=libc++ -std=c++11 -Wno-c++11-narrowing -O2 -isysroot \/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX10.9.sdk -mmacosx-version-min=10.7 -Wall -W -fPIC $(DEFINES)$/;"	m
+CXXFLAGS	qml/Makefile	/^CXXFLAGS      = -pipe -O2 -isysroot \/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX10.9.sdk -mmacosx-version-min=10.7 -Wall -W -fPIC $(DEFINES)$/;"	m
+Camera	Camera.cpp	/^Camera::Camera(const QRectF &nvp, int dpr) :$/;"	f	class:Camera
+Camera	Camera.hpp	/^class Camera$/;"	c
+Camera2D	Camera.cpp	/^Camera2D::Camera2D(const QPointF &center, double level, const QRectF &nvp, int dpr):$/;"	f	class:Camera2D
+Camera2D	Camera.cpp	/^Camera2D::Camera2D(const QRectF &nvp, int dpr):$/;"	f	class:Camera2D
+Camera2D	Camera.hpp	/^class Camera2D : public Camera$/;"	c
+Camera3D	Camera.cpp	/^Camera3D::Camera3D(const QRectF &nvp, int dpr):$/;"	f	class:Camera3D
+Camera3D	Camera.hpp	/^class Camera3D : public Camera$/;"	c
+Camera3DGround	Camera.cpp	/^Camera3DGround::Camera3DGround(const QRectF &nvp, int dpr):$/;"	f	class:Camera3DGround
+Camera3DGround	Camera.hpp	/^class Camera3DGround : public Camera3D$/;"	c
+Camera3DRenderer	Camera.cpp	/^Camera3DRenderer::Camera3DRenderer(const QRectF &nvp, int dpr):$/;"	f	class:Camera3DRenderer
+Camera3DRenderer	Camera.hpp	/^class Camera3DRenderer : public Camera3DGround$/;"	c
+CameraInteractor	CameraInteractor.cpp	/^CameraInteractor::CameraInteractor(NcMapView *mv, SimpleCamera *cam) :$/;"	f	class:CameraInteractor
+CameraInteractor	CameraInteractor.hpp	/^class CameraInteractor$/;"	c
+CapValue	qml/QChart.js	/^    function CapValue(valueToCap, maxValue, minValue) {$/;"	f
+Chart	qml/QChart.js	/^var Chart = function(canvas, context) {$/;"	c
+Chart.Bar	qml/QChart.js	/^    this.Bar = function(data,options) {$/;"	m
+Chart.Chart.PolarArea.calculateDrawingSizes	qml/QChart.js	/^        function calculateDrawingSizes() {$/;"	f
+Chart.Chart.PolarArea.draw	qml/QChart.js	/^        this.draw = function(progress) {$/;"	m
+Chart.Chart.PolarArea.drawAllSegments	qml/QChart.js	/^        function drawAllSegments(animationDecimal) {$/;"	f
+Chart.Chart.PolarArea.drawScale	qml/QChart.js	/^        function drawScale() {$/;"	f
+Chart.Chart.PolarArea.getValueBounds	qml/QChart.js	/^        function getValueBounds() {$/;"	f
+Chart.Chart.PolarArea.init	qml/QChart.js	/^        this.init = function() {$/;"	m
+Chart.Doughnut	qml/QChart.js	/^    this.Doughnut = function(data,options) {$/;"	m
+Chart.Line	qml/QChart.js	/^    this.Line = function(data,options) {$/;"	m
+Chart.Pie	qml/QChart.js	/^    this.Pie = function(data,options) {$/;"	m
+Chart.PolarArea	qml/QChart.js	/^    this.PolarArea = function(data, options) {$/;"	m
+Chart.PolarArea	qml/QChart.js	/^    var PolarArea = function(data,config,ctx) {$/;"	m
+Chart.Radar	qml/QChart.js	/^    this.Radar = function(data,options) {$/;"	m
+Chart.chart.Bar.defaults.animation	qml/QChart.js	/^            animation: true,$/;"	p
+Chart.chart.Bar.defaults.animationEasing	qml/QChart.js	/^            animationEasing: "easeOutQuart",$/;"	p
+Chart.chart.Bar.defaults.animationSteps	qml/QChart.js	/^            animationSteps: 60,$/;"	p
+Chart.chart.Bar.defaults.barDatasetSpacing	qml/QChart.js	/^            barDatasetSpacing: 1,$/;"	p
+Chart.chart.Bar.defaults.barShowStroke	qml/QChart.js	/^            barShowStroke: true,$/;"	p
+Chart.chart.Bar.defaults.barStrokeWidth	qml/QChart.js	/^            barStrokeWidth: 2,$/;"	p
+Chart.chart.Bar.defaults.barValueSpacing	qml/QChart.js	/^            barValueSpacing: 5,$/;"	p
+Chart.chart.Bar.defaults.onAnimationComplete	qml/QChart.js	/^            onAnimationComplete: null$/;"	p
+Chart.chart.Bar.defaults.scaleFontColor	qml/QChart.js	/^            scaleFontColor: "#666",$/;"	p
+Chart.chart.Bar.defaults.scaleFontFamily	qml/QChart.js	/^            scaleFontFamily: "'Arial'",$/;"	p
+Chart.chart.Bar.defaults.scaleFontSize	qml/QChart.js	/^            scaleFontSize: 12,$/;"	p
+Chart.chart.Bar.defaults.scaleFontStyle	qml/QChart.js	/^            scaleFontStyle: "normal",$/;"	p
+Chart.chart.Bar.defaults.scaleGridLineColor	qml/QChart.js	/^            scaleGridLineColor: "rgba(0,0,0,.05)",$/;"	p
+Chart.chart.Bar.defaults.scaleGridLineWidth	qml/QChart.js	/^            scaleGridLineWidth: 1,$/;"	p
+Chart.chart.Bar.defaults.scaleLabel	qml/QChart.js	/^            scaleLabel: "<%=value%>",$/;"	p
+Chart.chart.Bar.defaults.scaleLineColor	qml/QChart.js	/^            scaleLineColor: "rgba(0,0,0,.1)",$/;"	p
+Chart.chart.Bar.defaults.scaleLineWidth	qml/QChart.js	/^            scaleLineWidth: 1,$/;"	p
+Chart.chart.Bar.defaults.scaleOverlay	qml/QChart.js	/^            scaleOverlay: false,$/;"	p
+Chart.chart.Bar.defaults.scaleOverride	qml/QChart.js	/^            scaleOverride: false,$/;"	p
+Chart.chart.Bar.defaults.scaleShowGridLines	qml/QChart.js	/^            scaleShowGridLines: true,$/;"	p
+Chart.chart.Bar.defaults.scaleShowLabels	qml/QChart.js	/^            scaleShowLabels: true,$/;"	p
+Chart.chart.Bar.defaults.scaleStartValue	qml/QChart.js	/^            scaleStartValue: null,$/;"	p
+Chart.chart.Bar.defaults.scaleStepWidth	qml/QChart.js	/^            scaleStepWidth: null,$/;"	p
+Chart.chart.Bar.defaults.scaleSteps	qml/QChart.js	/^            scaleSteps: null,$/;"	p
+Chart.chart.Doughnut.defaults.animateRotate	qml/QChart.js	/^            animateRotate: true,$/;"	p
+Chart.chart.Doughnut.defaults.animateScale	qml/QChart.js	/^            animateScale: false,$/;"	p
+Chart.chart.Doughnut.defaults.animation	qml/QChart.js	/^            animation: true,$/;"	p
+Chart.chart.Doughnut.defaults.animationEasing	qml/QChart.js	/^            animationEasing: "easeOutBounce",$/;"	p
+Chart.chart.Doughnut.defaults.animationSteps	qml/QChart.js	/^            animationSteps: 100,$/;"	p
+Chart.chart.Doughnut.defaults.onAnimationComplete	qml/QChart.js	/^            onAnimationComplete: null$/;"	p
+Chart.chart.Doughnut.defaults.percentageInnerCutout	qml/QChart.js	/^            percentageInnerCutout: 50,$/;"	p
+Chart.chart.Doughnut.defaults.segmentShowStroke	qml/QChart.js	/^            segmentShowStroke: true,$/;"	p
+Chart.chart.Doughnut.defaults.segmentStrokeColor	qml/QChart.js	/^            segmentStrokeColor: "#fff",$/;"	p
+Chart.chart.Doughnut.defaults.segmentStrokeWidth	qml/QChart.js	/^            segmentStrokeWidth: 2,$/;"	p
+Chart.chart.Line.defaults.animation	qml/QChart.js	/^            animation: true,$/;"	p
+Chart.chart.Line.defaults.animationEasing	qml/QChart.js	/^            animationEasing: "easeOutQuart",$/;"	p
+Chart.chart.Line.defaults.animationSteps	qml/QChart.js	/^            animationSteps: 60,$/;"	p
+Chart.chart.Line.defaults.bezierCurve	qml/QChart.js	/^            bezierCurve: true,$/;"	p
+Chart.chart.Line.defaults.datasetFill	qml/QChart.js	/^            datasetFill: true,$/;"	p
+Chart.chart.Line.defaults.datasetStroke	qml/QChart.js	/^            datasetStroke: true,$/;"	p
+Chart.chart.Line.defaults.datasetStrokeWidth	qml/QChart.js	/^            datasetStrokeWidth: 2,$/;"	p
+Chart.chart.Line.defaults.onAnimationComplete	qml/QChart.js	/^            onAnimationComplete: null$/;"	p
+Chart.chart.Line.defaults.pointDot	qml/QChart.js	/^            pointDot: true,$/;"	p
+Chart.chart.Line.defaults.pointDotRadius	qml/QChart.js	/^            pointDotRadius: 4,$/;"	p
+Chart.chart.Line.defaults.pointDotStrokeWidth	qml/QChart.js	/^            pointDotStrokeWidth: 2,$/;"	p
+Chart.chart.Line.defaults.scaleFontColor	qml/QChart.js	/^            scaleFontColor: "#666",$/;"	p
+Chart.chart.Line.defaults.scaleFontFamily	qml/QChart.js	/^            scaleFontFamily: "'Arial'",$/;"	p
+Chart.chart.Line.defaults.scaleFontSize	qml/QChart.js	/^            scaleFontSize: 12,$/;"	p
+Chart.chart.Line.defaults.scaleFontStyle	qml/QChart.js	/^            scaleFontStyle: "normal",$/;"	p
+Chart.chart.Line.defaults.scaleGridLineColor	qml/QChart.js	/^            scaleGridLineColor: "rgba(0,0,0,.05)",$/;"	p
+Chart.chart.Line.defaults.scaleGridLineWidth	qml/QChart.js	/^            scaleGridLineWidth: 1,$/;"	p
+Chart.chart.Line.defaults.scaleLabel	qml/QChart.js	/^            scaleLabel: "<%=value%>",$/;"	p
+Chart.chart.Line.defaults.scaleLineColor	qml/QChart.js	/^            scaleLineColor: "rgba(0,0,0,.1)",$/;"	p
+Chart.chart.Line.defaults.scaleLineWidth	qml/QChart.js	/^            scaleLineWidth: 1,$/;"	p
+Chart.chart.Line.defaults.scaleOverlay	qml/QChart.js	/^            scaleOverlay: false,$/;"	p
+Chart.chart.Line.defaults.scaleOverride	qml/QChart.js	/^            scaleOverride: false,$/;"	p
+Chart.chart.Line.defaults.scaleShowGridLines	qml/QChart.js	/^            scaleShowGridLines: true,$/;"	p
+Chart.chart.Line.defaults.scaleShowLabels	qml/QChart.js	/^            scaleShowLabels: true,$/;"	p
+Chart.chart.Line.defaults.scaleStartValue	qml/QChart.js	/^            scaleStartValue: null,$/;"	p
+Chart.chart.Line.defaults.scaleStepWidth	qml/QChart.js	/^            scaleStepWidth: null,$/;"	p
+Chart.chart.Line.defaults.scaleSteps	qml/QChart.js	/^            scaleSteps: null,$/;"	p
+Chart.chart.Pie.defaults.animateRotate	qml/QChart.js	/^            animateRotate: true,$/;"	p
+Chart.chart.Pie.defaults.animateScale	qml/QChart.js	/^            animateScale: false,$/;"	p
+Chart.chart.Pie.defaults.animation	qml/QChart.js	/^            animation: true,$/;"	p
+Chart.chart.Pie.defaults.animationEasing	qml/QChart.js	/^            animationEasing: "easeOutBounce",$/;"	p
+Chart.chart.Pie.defaults.animationSteps	qml/QChart.js	/^            animationSteps: 100,$/;"	p
+Chart.chart.Pie.defaults.onAnimationComplete	qml/QChart.js	/^            onAnimationComplete: null$/;"	p
+Chart.chart.Pie.defaults.segmentShowStroke	qml/QChart.js	/^            segmentShowStroke: true,$/;"	p
+Chart.chart.Pie.defaults.segmentStrokeColor	qml/QChart.js	/^            segmentStrokeColor: "#fff",$/;"	p
+Chart.chart.Pie.defaults.segmentStrokeWidth	qml/QChart.js	/^            segmentStrokeWidth: 2,$/;"	p
+Chart.chart.PolarArea.defaults.animateRotate	qml/QChart.js	/^            animateRotate: true,$/;"	p
+Chart.chart.PolarArea.defaults.animateScale	qml/QChart.js	/^            animateScale: false,$/;"	p
+Chart.chart.PolarArea.defaults.animation	qml/QChart.js	/^            animation: true,$/;"	p
+Chart.chart.PolarArea.defaults.animationEasing	qml/QChart.js	/^            animationEasing: "easeOutBounce",$/;"	p
+Chart.chart.PolarArea.defaults.animationSteps	qml/QChart.js	/^            animationSteps: 100,$/;"	p
+Chart.chart.PolarArea.defaults.onAnimationComplete	qml/QChart.js	/^            onAnimationComplete: null$/;"	p
+Chart.chart.PolarArea.defaults.scaleBackdropColor	qml/QChart.js	/^            scaleBackdropColor: "rgba(255,255,255,0.75)",$/;"	p
+Chart.chart.PolarArea.defaults.scaleBackdropPaddingX	qml/QChart.js	/^            scaleBackdropPaddingX: 2,$/;"	p
+Chart.chart.PolarArea.defaults.scaleBackdropPaddingY	qml/QChart.js	/^            scaleBackdropPaddingY: 2,$/;"	p
+Chart.chart.PolarArea.defaults.scaleFontColor	qml/QChart.js	/^            scaleFontColor: "#666",$/;"	p
+Chart.chart.PolarArea.defaults.scaleFontFamily	qml/QChart.js	/^            scaleFontFamily: "'Arial'",$/;"	p
+Chart.chart.PolarArea.defaults.scaleFontSize	qml/QChart.js	/^            scaleFontSize: 12,$/;"	p
+Chart.chart.PolarArea.defaults.scaleFontStyle	qml/QChart.js	/^            scaleFontStyle: "normal",$/;"	p
+Chart.chart.PolarArea.defaults.scaleLabel	qml/QChart.js	/^            scaleLabel: "<%=value%>",$/;"	p
+Chart.chart.PolarArea.defaults.scaleLineColor	qml/QChart.js	/^            scaleLineColor: "rgba(0,0,0,.1)",$/;"	p
+Chart.chart.PolarArea.defaults.scaleLineWidth	qml/QChart.js	/^            scaleLineWidth: 1,$/;"	p
+Chart.chart.PolarArea.defaults.scaleOverlay	qml/QChart.js	/^            scaleOverlay: true,$/;"	p
+Chart.chart.PolarArea.defaults.scaleOverride	qml/QChart.js	/^            scaleOverride: false,$/;"	p
+Chart.chart.PolarArea.defaults.scaleShowLabelBackdrop	qml/QChart.js	/^            scaleShowLabelBackdrop: true,$/;"	p
+Chart.chart.PolarArea.defaults.scaleShowLabels	qml/QChart.js	/^            scaleShowLabels: true,$/;"	p
+Chart.chart.PolarArea.defaults.scaleShowLine	qml/QChart.js	/^            scaleShowLine: true,$/;"	p
+Chart.chart.PolarArea.defaults.scaleStartValue	qml/QChart.js	/^            scaleStartValue: null,$/;"	p
+Chart.chart.PolarArea.defaults.scaleStepWidth	qml/QChart.js	/^            scaleStepWidth: null,$/;"	p
+Chart.chart.PolarArea.defaults.scaleSteps	qml/QChart.js	/^            scaleSteps: null,$/;"	p
+Chart.chart.PolarArea.defaults.segmentShowStroke	qml/QChart.js	/^            segmentShowStroke: true,$/;"	p
+Chart.chart.PolarArea.defaults.segmentStrokeColor	qml/QChart.js	/^            segmentStrokeColor: "#fff",$/;"	p
+Chart.chart.PolarArea.defaults.segmentStrokeWidth	qml/QChart.js	/^            segmentStrokeWidth: 2,$/;"	p
+Chart.chart.Radar.defaults.angleLineColor	qml/QChart.js	/^            angleLineColor: "rgba(0,0,0,.1)",$/;"	p
+Chart.chart.Radar.defaults.angleLineWidth	qml/QChart.js	/^            angleLineWidth: 1,$/;"	p
+Chart.chart.Radar.defaults.angleShowLineOut	qml/QChart.js	/^            angleShowLineOut: true,$/;"	p
+Chart.chart.Radar.defaults.animation	qml/QChart.js	/^            animation: true,$/;"	p
+Chart.chart.Radar.defaults.animationEasing	qml/QChart.js	/^            animationEasing: "easeOutQuart",$/;"	p
+Chart.chart.Radar.defaults.animationSteps	qml/QChart.js	/^            animationSteps: 60,$/;"	p
+Chart.chart.Radar.defaults.datasetFill	qml/QChart.js	/^            datasetFill: true,$/;"	p
+Chart.chart.Radar.defaults.datasetStroke	qml/QChart.js	/^            datasetStroke: true,$/;"	p
+Chart.chart.Radar.defaults.datasetStrokeWidth	qml/QChart.js	/^            datasetStrokeWidth: 2,$/;"	p
+Chart.chart.Radar.defaults.onAnimationComplete	qml/QChart.js	/^            onAnimationComplete: null$/;"	p
+Chart.chart.Radar.defaults.pointDot	qml/QChart.js	/^            pointDot: true,$/;"	p
+Chart.chart.Radar.defaults.pointDotRadius	qml/QChart.js	/^            pointDotRadius: 3,$/;"	p
+Chart.chart.Radar.defaults.pointDotStrokeWidth	qml/QChart.js	/^            pointDotStrokeWidth: 1,$/;"	p
+Chart.chart.Radar.defaults.pointLabelFontColor	qml/QChart.js	/^            pointLabelFontColor: "#666",$/;"	p
+Chart.chart.Radar.defaults.pointLabelFontFamily	qml/QChart.js	/^            pointLabelFontFamily: "'Arial'",$/;"	p
+Chart.chart.Radar.defaults.pointLabelFontSize	qml/QChart.js	/^            pointLabelFontSize: 12,$/;"	p
+Chart.chart.Radar.defaults.pointLabelFontStyle	qml/QChart.js	/^            pointLabelFontStyle: "normal",$/;"	p
+Chart.chart.Radar.defaults.scaleBackdropColor	qml/QChart.js	/^            scaleBackdropColor: "rgba(255,255,255,0.75)",$/;"	p
+Chart.chart.Radar.defaults.scaleBackdropPaddingX	qml/QChart.js	/^            scaleBackdropPaddingX: 2,$/;"	p
+Chart.chart.Radar.defaults.scaleBackdropPaddingY	qml/QChart.js	/^            scaleBackdropPaddingY: 2,$/;"	p
+Chart.chart.Radar.defaults.scaleFontColor	qml/QChart.js	/^            scaleFontColor: "#666",$/;"	p
+Chart.chart.Radar.defaults.scaleFontFamily	qml/QChart.js	/^            scaleFontFamily: "'Arial'",$/;"	p
+Chart.chart.Radar.defaults.scaleFontSize	qml/QChart.js	/^            scaleFontSize: 12,$/;"	p
+Chart.chart.Radar.defaults.scaleFontStyle	qml/QChart.js	/^            scaleFontStyle: "normal",$/;"	p
+Chart.chart.Radar.defaults.scaleLabel	qml/QChart.js	/^            scaleLabel: "<%=value%>",$/;"	p
+Chart.chart.Radar.defaults.scaleLineColor	qml/QChart.js	/^            scaleLineColor: "rgba(0,0,0,.1)",$/;"	p
+Chart.chart.Radar.defaults.scaleLineWidth	qml/QChart.js	/^            scaleLineWidth: 1,$/;"	p
+Chart.chart.Radar.defaults.scaleOverlay	qml/QChart.js	/^            scaleOverlay: false,$/;"	p
+Chart.chart.Radar.defaults.scaleOverride	qml/QChart.js	/^            scaleOverride: false,$/;"	p
+Chart.chart.Radar.defaults.scaleShowLabelBackdrop	qml/QChart.js	/^            scaleShowLabelBackdrop: true,$/;"	p
+Chart.chart.Radar.defaults.scaleShowLabels	qml/QChart.js	/^            scaleShowLabels: false,$/;"	p
+Chart.chart.Radar.defaults.scaleShowLine	qml/QChart.js	/^            scaleShowLine: true,$/;"	p
+Chart.chart.Radar.defaults.scaleStartValue	qml/QChart.js	/^            scaleStartValue: null,$/;"	p
+Chart.chart.Radar.defaults.scaleStepWidth	qml/QChart.js	/^            scaleStepWidth: null,$/;"	p
+Chart.chart.Radar.defaults.scaleSteps	qml/QChart.js	/^            scaleSteps: null,$/;"	p
+ChartLineData.labels	qml/QChartGallery.js	/^      labels: ["January","February","March","April","May","June","July"],$/;"	p
+ChartType.BAR	qml/QChart.js	/^         BAR: 1,$/;"	p
+ChartType.DOUGHNUT	qml/QChart.js	/^    DOUGHNUT: 2,$/;"	p
+ChartType.LINE	qml/QChart.js	/^        LINE: 3,$/;"	p
+ChartType.PIE	qml/QChart.js	/^         PIE: 4,$/;"	p
+ChartType.POLAR	qml/QChart.js	/^       POLAR: 5,$/;"	p
+ChartType.RADAR	qml/QChart.js	/^       RADAR: 6$/;"	p
+ChartView	ChartView.cpp	/^ChartView::ChartView():$/;"	f	class:ChartView
+ChartView	ChartView.hpp	/^class ChartView : public QWebView$/;"	c
+DATARENDERINGLAYER_H	NcRenderingLayer.hpp	/^#define DATARENDERINGLAYER_H$/;"	d
+DEFINES	Makefile	/^DEFINES       = -DQT_NO_DEBUG -DQT_QUICKWIDGETS_LIB -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WEBKITWIDGETS_LIB -DQT_WIDGETS_LIB -DQT_WEBKIT_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB$/;"	m
+DEFINES	qml/Makefile	/^DEFINES       = $/;"	m
+DEL_DIR	Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_DIR	qml/Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_FILE	Makefile	/^DEL_FILE      = rm -f$/;"	m
+DEL_FILE	qml/Makefile	/^DEL_FILE      = rm -f$/;"	m
+DESTDIR	Makefile	/^DESTDIR       = #avoid trailing-slash linebreak$/;"	m
+DESTDIR	qml/Makefile	/^DESTDIR       = #avoid trailing-slash linebreak$/;"	m
+DIST	Makefile	/^DIST          = deployment.pri \\$/;"	m
+DIST	qml/Makefile	/^DIST          = \/usr\/local\/Cellar\/qt55\/5.5.1\/mkspecs\/features\/spec_pre.prf \\$/;"	m
+DISTDIR	Makefile	/^DISTDIR = \/Users\/L\/Desktop\/inforproj\/discharge\/src\/.tmp\/Climate1.0.0$/;"	m
+DISTDIR	qml/Makefile	/^DISTDIR = \/Users\/L\/Desktop\/inforproj\/discharge\/src\/qml\/.tmp\/qchart1.0.0$/;"	m
+DISTNAME	Makefile	/^DISTNAME      = Climate1.0.0$/;"	m
+DISTNAME	qml/Makefile	/^DISTNAME      = qchart1.0.0$/;"	m
+DataView	Camera.hpp	/^  struct DataView {$/;"	s	class:Camera
+Default	qml/QChart.js	/^    function Default(userDeclared,valueIfFalse) {$/;"	f
+General	QMatrix4x4D.hpp	/^        General         = 0x0002,   \/\/ General matrix, unknown contents$/;"	e	enum:QMatrix4x4D::__anon1
+INCPATH	Makefile	/^INCPATH       = -I. -I-I -I. -I-I -isystem \/usr\/local\/include -I\/usr\/local\/Cellar\/qt55\/5.5.1\/lib\/QtQuickWidgets.framework\/Headers -I\/usr\/local\/Cellar\/qt55\/5.5.1\/lib\/QtQuick.framework\/Headers -I\/usr\/local\/Cellar\/qt55\/5.5.1\/lib\/QtOpenGL.framework\/Headers -I\/usr\/local\/Cellar\/qt55\/5.5.1\/lib\/QtWebKitWidgets.framework\/Headers -I\/usr\/local\/Cellar\/qt55\/5.5.1\/lib\/QtWidgets.framework\/Headers -I\/usr\/local\/Cellar\/qt55\/5.5.1\/lib\/QtWebKit.framework\/Headers -I\/usr\/local\/Cellar\/qt55\/5.5.1\/lib\/QtGui.framework\/Headers -I\/usr\/local\/Cellar\/qt55\/5.5.1\/lib\/QtQml.framework\/Headers -I\/usr\/local\/Cellar\/qt55\/5.5.1\/lib\/QtNetwork.framework\/Headers -I\/usr\/local\/Cellar\/qt55\/5.5.1\/lib\/QtCore.framework\/Headers -I. -I\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX10.9.sdk\/System\/Library\/Frameworks\/OpenGL.framework\/Headers -I\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX10.9.sdk\/System\/Library\/Frameworks\/AGL.framework\/Headers -I\/usr\/local\/Cellar\/qt55\/5.5.1\/mkspecs\/macx-clang -F\/usr\/local\/Cellar\/qt55\/5.5.1\/lib$/;"	m
+INCPATH	qml/Makefile	/^INCPATH       = -I. -I\/usr\/local\/Cellar\/qt55\/5.5.1\/mkspecs\/macx-clang$/;"	m
+INSTALL_DIR	Makefile	/^INSTALL_DIR   = cp -f -R$/;"	m
+INSTALL_DIR	qml/Makefile	/^INSTALL_DIR   = cp -f -R$/;"	m
+INSTALL_FILE	Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_FILE	qml/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_PROGRAM	Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+INSTALL_PROGRAM	qml/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+Identity	QMatrix4x4D.hpp	/^        Identity        = 0x0001,   \/\/ Identity matrix$/;"	e	enum:QMatrix4x4D::__anon1
+LFLAGS	Makefile	/^LFLAGS        = -headerpad_max_install_names -I\/usr\/local\/opt\/qt5\/include -stdlib=libc++ -Wl,-syslibroot,\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX10.9.sdk -mmacosx-version-min=10.7$/;"	m
+LFLAGS	qml/Makefile	/^LFLAGS        = -headerpad_max_install_names -Wl,-syslibroot,\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX10.9.sdk -mmacosx-version-min=10.7$/;"	m
+LIBS	Makefile	/^LIBS          = $(SUBLIBS) -F\/usr\/local\/Cellar\/qt55\/5.5.1\/lib -L\/usr\/local\/lib\/ -lGLEW -lnetcdf_c++4 -framework QtQuickWidgets -framework QtQuick -framework QtGui -framework QtCore -framework DiskArbitration -framework IOKit -framework QtQml -framework QtNetwork -framework QtWidgets -framework QtOpenGL -framework QtWebKitWidgets -framework QtWebKit -framework OpenGL -framework AGL $/;"	m
+LIBS	qml/Makefile	/^LIBS          = $(SUBLIBS)  $/;"	m
+LINK	Makefile	/^LINK          = \/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/bin\/clang++$/;"	m
+LINK	qml/Makefile	/^LINK          = \/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/bin\/clang++$/;"	m
+MAKEFILE	Makefile	/^MAKEFILE      = Makefile$/;"	m
+MAKEFILE	qml/Makefile	/^MAKEFILE      = Makefile$/;"	m
+MKDIR	Makefile	/^MKDIR         = mkdir -p$/;"	m
+MKDIR	qml/Makefile	/^MKDIR         = mkdir -p$/;"	m
+MOVE	Makefile	/^MOVE          = mv -f$/;"	m
+MOVE	qml/Makefile	/^MOVE          = mv -f$/;"	m
+Max	qml/QChart.js	/^    function Max(array) {$/;"	f
+Min	qml/QChart.js	/^    function Min(array) {$/;"	f
+NCLOADER_H	NcLoader.hpp	/^#define NCLOADER_H$/;"	d
+NCMAPVIEW_H	NcMapView.hpp	/^#define NCMAPVIEW_H$/;"	d
+NCVIEWGUI_H	NcGui.hpp	/^#define NCVIEWGUI_H$/;"	d
+NCVIEW_H	NcQuickView.hpp	/^#define NCVIEW_H$/;"	d
+NcGui	NcGui.cpp	/^NcGui::NcGui(): fullscreen(false)$/;"	f	class:NcGui
+NcGui	NcGui.hpp	/^class NcGui : public BaseGui$/;"	c
+NcLoader	NcLoader.cpp	/^NcLoader::NcLoader()$/;"	f	class:NcLoader
+NcLoader	NcLoader.hpp	/^class NcLoader$/;"	c
+NcMapView	NcMapView.cpp	/^NcMapView::NcMapView(const QString &filename, const QRectF &vp, QWidget *parent)$/;"	f	class:NcMapView
+NcMapView	NcMapView.hpp	/^class NcMapView : public QGLWidget$/;"	c
+NcQuickView	NcQuickView.cpp	/^NcQuickView::NcQuickView(const QString &filename, const QRectF &vp, QQuickWindow* parent)$/;"	f	class:NcQuickView
+NcQuickView	NcQuickView.hpp	/^class NcQuickView : public QQuickView$/;"	c
+NcRenderingLayer	NcRenderingLayer.cpp	/^NcRenderingLayer::NcRenderingLayer()$/;"	f	class:NcRenderingLayer
+NcRenderingLayer	NcRenderingLayer.hpp	/^class NcRenderingLayer$/;"	c
+OBJECTS	Makefile	/^OBJECTS       = main.o \\$/;"	m
+OBJECTS	qml/Makefile	/^OBJECTS       = $/;"	m
+OBJECTS_DIR	Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+OBJECTS_DIR	qml/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+OPENGLFUNCS_HPP	OpenGLFuncs.hpp	/^#define OPENGLFUNCS_HPP$/;"	d
+QMAKE	Makefile	/^QMAKE         = \/usr\/local\/Cellar\/qt55\/5.5.1\/bin\/qmake$/;"	m
+QMAKE	qml/Makefile	/^QMAKE         = \/usr\/local\/Cellar\/qt55\/5.5.1\/bin\/qmake$/;"	m
+QMAKE_COMP_QMAKE_OBJECTIVE_CFLAGS	Makefile	/^QMAKE_COMP_QMAKE_OBJECTIVE_CFLAGS = -pipe \\$/;"	m
+QMAKE_COMP_QMAKE_OBJECTIVE_CFLAGS	qml/Makefile	/^QMAKE_COMP_QMAKE_OBJECTIVE_CFLAGS = -pipe \\$/;"	m
+QMAKE_TARGET	Makefile	/^QMAKE_TARGET  = Climate$/;"	m
+QMAKE_TARGET	qml/Makefile	/^QMAKE_TARGET  = qchart$/;"	m
+QMATRIX4X4D_HPP	QMatrix4x4D.hpp	/^#define QMATRIX4X4D_HPP$/;"	d
+QMatrix4x4D	QMatrix4x4D.cpp	/^QMatrix4x4D::QMatrix4x4D(const QMatrix& matrix)$/;"	f	class:QMatrix4x4D
+QMatrix4x4D	QMatrix4x4D.cpp	/^QMatrix4x4D::QMatrix4x4D(const QTransform& transform)$/;"	f	class:QMatrix4x4D
+QMatrix4x4D	QMatrix4x4D.cpp	/^QMatrix4x4D::QMatrix4x4D(const double *values)$/;"	f	class:QMatrix4x4D
+QMatrix4x4D	QMatrix4x4D.cpp	/^QMatrix4x4D::QMatrix4x4D(const double *values, int cols, int rows)$/;"	f	class:QMatrix4x4D
+QMatrix4x4D	QMatrix4x4D.hpp	/^    QMatrix4x4D(int) { flagBits = General; }$/;"	f	class:QMatrix4x4D
+QMatrix4x4D	QMatrix4x4D.hpp	/^    inline QMatrix4x4D() { setToIdentity(); }$/;"	f	class:QMatrix4x4D
+QMatrix4x4D	QMatrix4x4D.hpp	/^Q_INLINE_TEMPLATE QMatrix4x4D::QMatrix4x4D$/;"	f	class:QMatrix4x4D
+QMatrix4x4D	QMatrix4x4D.hpp	/^class QMatrix4x4D$/;"	c
+QMatrix4x4D	QMatrix4x4D.hpp	/^inline QMatrix4x4D::QMatrix4x4D$/;"	f	class:QMatrix4x4D
+QT_MOC_LITERAL	moc_ChartView.cpp	/^#define QT_MOC_LITERAL(/;"	d	file:
+QT_MOC_LITERAL	moc_ChartView.cpp	/^#undef QT_MOC_LITERAL$/;"	d	file:
+QT_MOC_LITERAL	moc_NcQuickView.cpp	/^#define QT_MOC_LITERAL(/;"	d	file:
+QT_MOC_LITERAL	moc_NcQuickView.cpp	/^#undef QT_MOC_LITERAL$/;"	d	file:
+QT_NAMESPACE	qrc_NcGui.cpp	/^namespace QT_NAMESPACE {$/;"	n	file:
+QT_NAMESPACE	qrc_NcView.cpp	/^namespace QT_NAMESPACE {$/;"	n	file:
+QT_RCC_MANGLE_NAMESPACE	qrc_NcGui.cpp	/^#   define QT_RCC_MANGLE_NAMESPACE(/;"	d	file:
+QT_RCC_MANGLE_NAMESPACE	qrc_NcGui.cpp	/^#  define QT_RCC_MANGLE_NAMESPACE(/;"	d	file:
+QT_RCC_MANGLE_NAMESPACE	qrc_NcView.cpp	/^#   define QT_RCC_MANGLE_NAMESPACE(/;"	d	file:
+QT_RCC_MANGLE_NAMESPACE	qrc_NcView.cpp	/^#  define QT_RCC_MANGLE_NAMESPACE(/;"	d	file:
+QT_RCC_MANGLE_NAMESPACE0	qrc_NcGui.cpp	/^#  define QT_RCC_MANGLE_NAMESPACE0(/;"	d	file:
+QT_RCC_MANGLE_NAMESPACE0	qrc_NcView.cpp	/^#  define QT_RCC_MANGLE_NAMESPACE0(/;"	d	file:
+QT_RCC_MANGLE_NAMESPACE1	qrc_NcGui.cpp	/^#  define QT_RCC_MANGLE_NAMESPACE1(/;"	d	file:
+QT_RCC_MANGLE_NAMESPACE1	qrc_NcView.cpp	/^#  define QT_RCC_MANGLE_NAMESPACE1(/;"	d	file:
+QT_RCC_MANGLE_NAMESPACE2	qrc_NcGui.cpp	/^#  define QT_RCC_MANGLE_NAMESPACE2(/;"	d	file:
+QT_RCC_MANGLE_NAMESPACE2	qrc_NcView.cpp	/^#  define QT_RCC_MANGLE_NAMESPACE2(/;"	d	file:
+QT_RCC_PREPEND_NAMESPACE	qrc_NcGui.cpp	/^#   define QT_RCC_PREPEND_NAMESPACE(/;"	d	file:
+QT_RCC_PREPEND_NAMESPACE	qrc_NcGui.cpp	/^#  define QT_RCC_PREPEND_NAMESPACE(/;"	d	file:
+QT_RCC_PREPEND_NAMESPACE	qrc_NcView.cpp	/^#   define QT_RCC_PREPEND_NAMESPACE(/;"	d	file:
+QT_RCC_PREPEND_NAMESPACE	qrc_NcView.cpp	/^#  define QT_RCC_PREPEND_NAMESPACE(/;"	d	file:
+QVECTOR3DD_HPP	QVector3DD.hpp	/^#define QVECTOR3DD_HPP$/;"	d
+QVector3DD	QVector3DD.cpp	/^QVector3DD::QVector3DD(const QVector2D& vector)$/;"	f	class:QVector3DD
+QVector3DD	QVector3DD.cpp	/^QVector3DD::QVector3DD(const QVector2D& vector, double zpos)$/;"	f	class:QVector3DD
+QVector3DD	QVector3DD.cpp	/^QVector3DD::QVector3DD(const QVector3D& vector)$/;"	f	class:QVector3DD
+QVector3DD	QVector3DD.cpp	/^QVector3DD::QVector3DD(const QVector4D& vector)$/;"	f	class:QVector3DD
+QVector3DD	QVector3DD.hpp	/^class QVector3DD$/;"	c
+QVector3DD	QVector3DD.hpp	/^inline QVector3DD::QVector3DD() : xp(0.0f), yp(0.0f), zp(0.0f) {}$/;"	f	class:QVector3DD
+QVector3DD	QVector3DD.hpp	/^inline QVector3DD::QVector3DD(const QPoint& point) : xp(point.x()), yp(point.y()), zp(0.0f) {}$/;"	f	class:QVector3DD
+QVector3DD	QVector3DD.hpp	/^inline QVector3DD::QVector3DD(const QPointF& point) : xp(point.x()), yp(point.y()), zp(0.0f) {}$/;"	f	class:QVector3DD
+QVector3DD	QVector3DD.hpp	/^inline QVector3DD::QVector3DD(const QPointF& point, double zpos) : xp(point.x()), yp(point.y()), zp(zpos) {}$/;"	f	class:QVector3DD
+QVector3DD	QVector3DD.hpp	/^inline QVector3DD::QVector3DD(double xpos, double ypos, double zpos) : xp(xpos), yp(ypos), zp(zpos) {}$/;"	f	class:QVector3DD
+QVector3DD	QVector3DD.hpp	/^inline QVector3DD::QVector3DD(double xpos, double ypos, double zpos, int) : xp(xpos), yp(ypos), zp(zpos) {}$/;"	f	class:QVector3DD
+RANLIB	Makefile	/^RANLIB        = \/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/bin\/ranlib -s$/;"	m
+RANLIB	qml/Makefile	/^RANLIB        = \/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/bin\/ranlib -s$/;"	m
+Radar	qml/QChart.js	/^    var Radar = function (data, config, ctx) {$/;"	c
+Radar.Doughnut	qml/QChart.js	/^    var Doughnut = function(data,config,ctx) {$/;"	m
+Radar.Line	qml/QChart.js	/^    var Line = function(data,config,ctx) {$/;"	m
+Radar.Pie	qml/QChart.js	/^    var Pie = function(data,config,ctx) {$/;"	m
+Radar.Radar.Doughnut.draw	qml/QChart.js	/^        this.draw = function (progress) {$/;"	m
+Radar.Radar.Doughnut.drawDoughnutSegments	qml/QChart.js	/^        function drawDoughnutSegments (animationDecimal) {$/;"	f
+Radar.Radar.Doughnut.init	qml/QChart.js	/^        this.init = function () {$/;"	m
+Radar.Radar.Line.draw	qml/QChart.js	/^        this.draw = function (progress) {$/;"	m
+Radar.Radar.Line.drawLines	qml/QChart.js	/^        function drawLines(animPc) {$/;"	f
+Radar.Radar.Line.init	qml/QChart.js	/^        this.init = function () {$/;"	m
+Radar.Radar.Pie.draw	qml/QChart.js	/^        this.draw = function (progress) {$/;"	m
+Radar.Radar.Pie.drawPieSegments	qml/QChart.js	/^        function drawPieSegments (animationDecimal) {$/;"	f
+Radar.Radar.Pie.init	qml/QChart.js	/^        this.init = function () {$/;"	m
+Radar.calculateDrawingSizes	qml/QChart.js	/^        function calculateDrawingSizes() {$/;"	f
+Radar.draw	qml/QChart.js	/^        this.draw = function(progress) {$/;"	m
+Radar.drawAllDataPoints	qml/QChart.js	/^        function drawAllDataPoints(animationDecimal) {$/;"	f
+Radar.drawScale	qml/QChart.js	/^        function drawScale() {$/;"	f
+Radar.getValueBounds	qml/QChart.js	/^        function getValueBounds() {$/;"	f
+Radar.init	qml/QChart.js	/^        this.init = function () {$/;"	m
+Radar.xPos	qml/QChart.js	/^            function xPos(iteration) {$/;"	f
+Radar.yPos	qml/QChart.js	/^            function yPos(dataSet,iteration) {$/;"	f
+Rotation	QMatrix4x4D.hpp	/^        Rotation        = 0x0010    \/\/ Contains a simple rotation$/;"	e	enum:QMatrix4x4D::__anon1
+SED	Makefile	/^SED           = sed$/;"	m
+SED	qml/Makefile	/^SED           = sed$/;"	m
+SIMPLECAMERA_H	SimpleCamera.hpp	/^#define SIMPLECAMERA_H$/;"	d
+SOURCES	Makefile	/^SOURCES       = main.cpp \\$/;"	m
+SOURCES	qml/Makefile	/^SOURCES       =  $/;"	m
+STRIP	Makefile	/^STRIP         = $/;"	m
+STRIP	qml/Makefile	/^STRIP         = $/;"	m
+SYMLINK	Makefile	/^SYMLINK       = ln -f -s$/;"	m
+SYMLINK	qml/Makefile	/^SYMLINK       = ln -f -s$/;"	m
+Scale	QMatrix4x4D.hpp	/^        Scale           = 0x0008,   \/\/ Contains a simple scale$/;"	e	enum:QMatrix4x4D::__anon1
+SimpleCamera	SimpleCamera.cpp	/^SimpleCamera::SimpleCamera(const QRectF &nvp, int dpr, QPointF p)$/;"	f	class:SimpleCamera
+SimpleCamera	SimpleCamera.hpp	/^class SimpleCamera$/;"	c
+TAR	Makefile	/^TAR           = tar -cf$/;"	m
+TAR	qml/Makefile	/^TAR           = tar -cf$/;"	m
+TARGET	Makefile	/^TARGET        = Climate$/;"	m
+TARGET	qml/Makefile	/^TARGET        = qchart$/;"	m
+TARGET0	qml/Makefile	/^TARGET0       = $/;"	m
+TARGET1	qml/Makefile	/^TARGET1       = $/;"	m
+TARGET2	qml/Makefile	/^TARGET2       = $/;"	m
+TARGETA	qml/Makefile	/^TARGETA       = $/;"	m
+TARGETD	qml/Makefile	/^TARGETD       = $/;"	m
+Translation	QMatrix4x4D.hpp	/^        Translation     = 0x0004,   \/\/ Contains a simple translation$/;"	e	enum:QMatrix4x4D::__anon1
+VISIBILITY_FULL	Camera.hpp	/^    VISIBILITY_FULL, \/\/ all visibility tests to be redone$/;"	e	enum:Camera::VisibilityTest
+VISIBILITY_LESS	Camera.hpp	/^    VISIBILITY_LESS, \/\/ visible objects may become hidden$/;"	e	enum:Camera::VisibilityTest
+VISIBILITY_MORE	Camera.hpp	/^    VISIBILITY_MORE, \/\/ hidden objects may become visible$/;"	e	enum:Camera::VisibilityTest
+VISIBILITY_NONE	Camera.hpp	/^    VISIBILITY_NONE = -1$/;"	e	enum:Camera::VisibilityTest
+VISIBILITY_SAME	Camera.hpp	/^    VISIBILITY_SAME, \/\/ only perform tests on new objects$/;"	e	enum:Camera::VisibilityTest
+VisibilityTest	Camera.hpp	/^  enum VisibilityTest {$/;"	g	class:Camera
+WORLD_ZOOM_LEVEL	Camera.hpp	/^#define WORLD_ZOOM_LEVEL /;"	d
+action	CameraInteractor.hpp	/^    int        action;$/;"	m	class:CameraInteractor
+anchor	SimpleCamera.hpp	/^    QPointF anchor;$/;"	m	class:SimpleCamera
+baseCamera	CameraInteractor.hpp	/^    SimpleCamera   * baseCamera;$/;"	m	class:CameraInteractor
+calculateDrawingSizes	qml/QChart.js	/^        function calculateDrawingSizes() {$/;"	f
+calculateXAxisSize	qml/QChart.js	/^        function calculateXAxisSize() {$/;"	f
+calculatedScale.steps	qml/QChart.js	/^                    steps: config.scaleSteps,$/;"	p
+callShowHideChart	NcQuickView.hpp	/^    Q_INVOKABLE void callShowHideChart(){$/;"	f	class:NcQuickView
+cam	NcMapView.cpp	/^SimpleCamera *NcMapView::cam()$/;"	f	class:NcMapView
+cam2geo	Camera.hpp	/^inline QVector3DD Camera3D::cam2geo(const QVector3DD &world) const$/;"	f	class:Camera3D
+cameraFile	Camera.hpp	/^  QString cameraFile;$/;"	m	class:Camera3D
+cams	NcMapView.hpp	/^    SimpleCamera *cams;$/;"	m	class:NcMapView
+colorbuffer	Camera.hpp	/^    GLuint                colorbuffer;$/;"	m	class:Camera3DRenderer
+colorbuffer	NcRenderingLayer.hpp	/^    GLuint                colorbuffer;$/;"	m	class:NcRenderingLayer
+column	QMatrix4x4D.hpp	/^inline QVector4D QMatrix4x4D::column(int index) const$/;"	f	class:QMatrix4x4D
+connectSlots	NcGui.cpp	/^void NcGui::connectSlots()$/;"	f	class:NcGui
+connectSlots	basegui.hpp	/^    virtual void connectSlots(){}$/;"	f	class:BaseGui
+constData	QMatrix4x4D.hpp	/^    inline const double *constData() const { return m[0]; }$/;"	f	class:QMatrix4x4D
+copyFromCamera2D	Camera.cpp	/^void Camera3D::copyFromCamera2D(const Camera2D *cam2)$/;"	f	class:Camera3D
+copyFromCamera3D	Camera.cpp	/^void Camera3D::copyFromCamera3D(const Camera3D *camera)$/;"	f	class:Camera3D
+copyToCamera2D	Camera.cpp	/^void Camera3D::copyToCamera2D(Camera2D *cam2) const$/;"	f	class:Camera3D
+createTexImage2D	OpenGLFuncs.cpp	/^void createTexImage2D(int width, int height, GLenum iformat, GLenum format, GLenum type, GLuint *tex, void* data)$/;"	f
+createTextureBuffer	OpenGLFuncs.cpp	/^void createTextureBuffer(int size, GLenum format, GLuint *tex, GLuint *bo, void* data)$/;"	f
+createUniformBuffer	OpenGLFuncs.cpp	/^void createUniformBuffer(int size, GLuint *bo, void* data)$/;"	f
+crossProduct	QVector3DD.cpp	/^QVector3DD QVector3DD::crossProduct(const QVector3DD& v1, const QVector3DD& v2)$/;"	f	class:QVector3DD
+currentTimestep	NcMapView.hpp	/^    int currentTimestep;$/;"	m	class:NcMapView
+data	NcMapView.hpp	/^    std::vector<float> data;$/;"	m	class:NcMapView
+data	QMatrix4x4D.hpp	/^    inline const double *data() const { return m[0]; }$/;"	f	class:QMatrix4x4D
+data	QMatrix4x4D.hpp	/^inline double *QMatrix4x4D::data()$/;"	f	class:QMatrix4x4D
+data	moc_ChartView.cpp	/^    QByteArrayData data[3];$/;"	m	struct:qt_meta_stringdata_ChartView_t	file:
+data	moc_NcQuickView.cpp	/^    QByteArrayData data[5];$/;"	m	struct:qt_meta_stringdata_NcQuickView_t	file:
+dataHeight	NcMapView.hpp	/^    int dataHeight;$/;"	m	class:NcMapView
+dataLevel	Camera.hpp	/^  float     dataLevel;$/;"	m	class:Camera
+dataView	Camera.hpp	/^  DataView  dataView;$/;"	m	class:Camera
+dataWidth	NcMapView.hpp	/^    int dataWidth;$/;"	m	class:NcMapView
+determinant	QMatrix4x4D.cpp	/^double QMatrix4x4D::determinant() const$/;"	f	class:QMatrix4x4D
+devicePixelRatio	Camera.hpp	/^  int       devicePixelRatio;$/;"	m	class:Camera
+devicePixelRatio	SimpleCamera.hpp	/^    int devicePixelRatio;$/;"	m	class:SimpleCamera
+distanceToLine	QVector3DD.cpp	/^double QVector3DD::distanceToLine$/;"	f	class:QVector3DD
+distanceToPlane	QVector3DD.cpp	/^double QVector3DD::distanceToPlane$/;"	f	class:QVector3DD
+dlg	NcGui.hpp	/^    ChartView* dlg;$/;"	m	class:NcGui
+dotProduct	QVector3DD.cpp	/^double QVector3DD::dotProduct(const QVector3DD& v1, const QVector3DD& v2)$/;"	f	class:QVector3DD
+drawScale	qml/QChart.js	/^        function drawScale() {$/;"	f
+dummy	qrc_NcGui.cpp	/^   } dummy;$/;"	m	namespace:__anon2	typeref:struct:__anon2::initializer	file:
+dummy	qrc_NcView.cpp	/^   } dummy;$/;"	m	namespace:__anon3	typeref:struct:__anon3::initializer	file:
+ensureOpenGLFormat	NcQuickView.cpp	/^void NcQuickView::ensureOpenGLFormat()$/;"	f	class:NcQuickView
+f2s16	QVector3DD.cpp	/^inline uint32_t f2s16(float f)$/;"	f
+f2u16	QVector3DD.cpp	/^inline uint32_t f2u16(float f)$/;"	f
+farPlane	Camera.hpp	/^  float      farPlane;$/;"	m	class:Camera3D
+filename	NcGui.hpp	/^    QString filename;$/;"	m	class:NcGui
+filepath	NcLoader.hpp	/^    QString filepath;$/;"	m	class:NcLoader
+fill	QMatrix4x4D.hpp	/^inline void QMatrix4x4D::fill(double value)$/;"	f	class:QMatrix4x4D
+flagBits	QMatrix4x4D.hpp	/^    int flagBits;           \/\/ Flag bits from the enum below.$/;"	m	class:QMatrix4x4D
+flipCoordinates	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::flipCoordinates()$/;"	f	class:QMatrix4x4D
+focusDistance	CameraInteractor.hpp	/^    float      focusDistance;$/;"	m	class:CameraInteractor
+frame	ChartView.hpp	/^    QWebFrame *frame;$/;"	m	class:ChartView
+fromSpherical	QVector3DD.cpp	/^QVector3DD QVector3DD::fromSpherical(const QPointF &p)$/;"	f	class:QVector3DD
+frustum	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::frustum(double left, double right, double bottom, double top, double nearPlane, double farPlane)$/;"	f	class:QMatrix4x4D
+fullscreen	NcGui.hpp	/^    bool fullscreen;$/;"	m	class:NcGui
+geo2cam	Camera.hpp	/^inline QVector3DD Camera3D::geo2cam(const QVector3DD &lat_lon_z) const$/;"	f	class:Camera3D
+geo2level	Camera.hpp	/^inline QPointF Camera::geo2level(const QPointF &geo, float level)$/;"	f	class:Camera
+geo2world	Camera.hpp	/^inline QPointF Camera::geo2world(const QPointF &geo)$/;"	f	class:Camera
+geoBounds	NcMapView.hpp	/^    QRectF geoBounds;$/;"	m	class:NcMapView
+geoCenter	Camera.hpp	/^  QPointF         geoCenter;$/;"	m	class:Camera2D
+getCamera	CameraInteractor.hpp	/^inline SimpleCamera * CameraInteractor::getCamera() const$/;"	f	class:CameraInteractor
+getCenter	Camera.hpp	/^inline const QPointF & Camera2D::getCenter() const$/;"	f	class:Camera2D
+getData	NcMapView.cpp	/^const std::vector<float>& NcMapView::getData()$/;"	f	class:NcMapView
+getDataFromNC	NcLoader.cpp	/^void NcLoader::getDataFromNC(QString var, std::vector<size_t> start, std::vector<size_t> count, std::vector<float> &values)$/;"	f	class:NcLoader
+getDataView	Camera.hpp	/^inline const Camera::DataView * Camera::getDataView() const$/;"	f	class:Camera
+getDecimalPlaces	qml/QChart.js	/^    function getDecimalPlaces (num) {$/;"	f
+getDepthFocus	Camera.cpp	/^float Camera3D::getDepthFocus(float depth) const$/;"	f	class:Camera3D
+getDevicePixelRatio	Camera.hpp	/^inline int Camera::getDevicePixelRatio() const$/;"	f	class:Camera
+getElevation	Camera.hpp	/^inline float Camera3D::getElevation() const$/;"	f	class:Camera3D
+getFarPlane	Camera.hpp	/^inline float Camera3D::getFarPlane() const$/;"	f	class:Camera3D
+getGeoBounds	NcMapView.cpp	/^const QRectF& NcMapView::getGeoBounds()$/;"	f	class:NcMapView
+getGroundFocus	Camera.cpp	/^float Camera3D::getGroundFocus() const$/;"	f	class:Camera3D
+getGroundResolution	Camera.cpp	/^double Camera2D::getGroundResolution() const$/;"	f	class:Camera2D
+getGroundResolution	Camera.cpp	/^double Camera3D::getGroundResolution() const$/;"	f	class:Camera3D
+getGroundResolution	Camera.hpp	/^inline double Camera::getGroundResolution(const QPointF &geo, float level)$/;"	f	class:Camera
+getHeight	NcMapView.cpp	/^int NcMapView::getHeight()$/;"	f	class:NcMapView
+getLastPos	CameraInteractor.hpp	/^inline QPointF CameraInteractor::getLastPos()$/;"	f	class:CameraInteractor
+getLevelFromResolution	Camera.hpp	/^inline float Camera::getLevelFromResolution(const QPointF &geo, double res)$/;"	f	class:Camera
+getLocalViewport	Camera.hpp	/^inline const QRectF & Camera::getLocalViewport() const$/;"	f	class:Camera
+getModelViewProjectionMatrix	SimpleCamera.cpp	/^const QMatrix4x4D &SimpleCamera::getModelViewProjectionMatrix()$/;"	f	class:SimpleCamera
+getNativeViewport	Camera.hpp	/^inline const QRect & Camera::getNativeViewport() const$/;"	f	class:Camera
+getNativeViewport	SimpleCamera.cpp	/^const QRectF &SimpleCamera::getNativeViewport() const$/;"	f	class:SimpleCamera
+getNearPlane	Camera.hpp	/^inline float Camera3D::getNearPlane() const$/;"	f	class:Camera3D
+getNormalizedViewport	Camera.hpp	/^inline const QRectF & Camera::getNormalizedViewport() const$/;"	f	class:Camera
+getOrigin	NcMapView.cpp	/^const QPointF &NcMapView::getOrigin()$/;"	f	class:NcMapView
+getPixelScaling	Camera.hpp	/^inline float Camera::getPixelScaling() const$/;"	f	class:Camera
+getRenderingVisibility	Camera.hpp	/^inline Camera::VisibilityTest Camera::getRenderingVisibility() const$/;"	f	class:Camera
+getScreenViewport	Camera.hpp	/^inline const QRectF & Camera::getScreenViewport() const$/;"	f	class:Camera
+getSize	NcLoader.cpp	/^int NcLoader::getSize(QString dim)$/;"	f	class:NcLoader
+getTotalSize	Camera.hpp	/^inline const QSizeF & Camera::getTotalSize() const$/;"	f	class:Camera
+getValueBounds	qml/QChart.js	/^        function getValueBounds() {$/;"	f
+getVerticalAngle	Camera.hpp	/^inline float Camera3D::getVerticalAngle() const$/;"	f	class:Camera3D
+getWBounds	NcMapView.cpp	/^const QRectF& NcMapView::getWBounds()$/;"	f	class:NcMapView
+getWidth	NcMapView.cpp	/^int NcMapView::getWidth()$/;"	f	class:NcMapView
+getWorldCenter	Camera.hpp	/^inline QVector3DD Camera3D::getWorldCenter() const$/;"	f	class:Camera3D
+getWorldCenter	Camera.hpp	/^inline const QPointF & Camera2D::getWorldCenter() const$/;"	f	class:Camera2D
+getWorldCenterOld	Camera.hpp	/^inline QVector3DD Camera3D::getWorldCenterOld() const$/;"	f	class:Camera3D
+getWorldLookAt	Camera.hpp	/^inline QVector3DD Camera3D::getWorldLookAt() const$/;"	f	class:Camera3D
+getWorldUp	Camera.hpp	/^inline QVector3DD Camera3D::getWorldUp() const$/;"	f	class:Camera3D
+getWorldViewport	Camera.hpp	/^inline const QRectF & Camera::getWorldViewport() const$/;"	f	class:Camera
+getZoomFactor	Camera.hpp	/^inline float Camera::getZoomFactor() const$/;"	f	class:Camera
+getZoomLevel	Camera.hpp	/^inline float Camera::getZoomLevel() const$/;"	f	class:Camera
+glTransform	Camera.cpp	/^void Camera2D::glTransform(float dataLevel, const QPointF &translation)$/;"	f	class:Camera2D
+glTransform	Camera.cpp	/^void Camera3D::glTransform(float dataLevel, const QPointF &translation, const QPointF &scale)$/;"	f	class:Camera3D
+glTransformOverlay	Camera.cpp	/^void Camera2D::glTransformOverlay(bool useDepth)$/;"	f	class:Camera2D
+glTransformOverlay	Camera.cpp	/^void Camera3D::glTransformOverlay(bool useDepth)$/;"	f	class:Camera3D
+ground	Camera.hpp	/^    QRectF  ground;$/;"	m	struct:Camera::DataView
+groundRes	Camera.hpp	/^  double     groundRes;$/;"	m	class:Camera3D
+headLight	Camera.hpp	/^inline const QVector3DD & Camera3D::headLight() const$/;"	f	class:Camera3D
+headLightTransformed	Camera.hpp	/^inline QVector3DD Camera3D::headLightTransformed() const$/;"	f	class:Camera3D
+height	Camera.hpp	/^    QPointF height;$/;"	m	struct:Camera::DataView
+horizonCulling	Camera.hpp	/^  float     horizonCulling;$/;"	m	class:Camera
+inferSpecialType	QMatrix4x4D.cpp	/^void QMatrix4x4D::inferSpecialType()$/;"	f	class:QMatrix4x4D
+info	Camera.cpp	/^QString Camera2D::info() const$/;"	f	class:Camera2D
+info	Camera.cpp	/^QString Camera3D::info() const$/;"	f	class:Camera3D
+info	Camera.hpp	/^  virtual QString info() const { return QString(); }$/;"	f	class:Camera
+init	NcRenderingLayer.cpp	/^void NcRenderingLayer::init(NcMapView *view)$/;"	f	class:NcRenderingLayer
+initFrame	ChartView.cpp	/^void ChartView::initFrame()$/;"	f	class:ChartView
+initShader	Camera.cpp	/^void Camera3DRenderer::initShader()$/;"	f	class:Camera3DRenderer
+initializeGL	NcMapView.cpp	/^void NcMapView::initializeGL() {$/;"	f	class:NcMapView
+initializeGL	NcQuickView.cpp	/^void NcQuickView::initializeGL()$/;"	f	class:NcQuickView
+initialized	Camera.hpp	/^    bool initialized;$/;"	m	class:Camera3DRenderer
+initializer	qrc_NcGui.cpp	/^       initializer() { QT_RCC_MANGLE_NAMESPACE(qInitResources_NcGui)(); }$/;"	f	struct:__anon2::initializer
+initializer	qrc_NcGui.cpp	/^   struct initializer {$/;"	s	namespace:__anon2	file:
+initializer	qrc_NcView.cpp	/^       initializer() { QT_RCC_MANGLE_NAMESPACE(qInitResources_NcView)(); }$/;"	f	struct:__anon3::initializer
+initializer	qrc_NcView.cpp	/^   struct initializer {$/;"	s	namespace:__anon3	file:
+interactor	NcMapView.hpp	/^    CameraInteractor *interactor;$/;"	m	class:NcMapView
+inverted	QMatrix4x4D.cpp	/^QMatrix4x4D QMatrix4x4D::inverted(bool *invertible) const$/;"	f	class:QMatrix4x4D
+isBehindCamera	Camera.hpp	/^inline bool Camera3D::isBehindCamera(const QVector3DD &p) const$/;"	f	class:Camera3D
+isIdentity	QMatrix4x4D.hpp	/^inline bool QMatrix4x4D::isIdentity() const$/;"	f	class:QMatrix4x4D
+isInFrustum	Camera.cpp	/^bool Camera3D::isInFrustum(const QVector3DD &p) const$/;"	f	class:Camera3D
+isInFrustum	Camera.hpp	/^  virtual bool isInFrustum(const QVector3DD &p) const { return true; }$/;"	f	class:Camera
+isInFrustum	Camera.hpp	/^inline bool Camera::isInFrustum(const QPolygonF &poly) const$/;"	f	class:Camera
+isInteracting	CameraInteractor.cpp	/^bool CameraInteractor::isInteracting() const$/;"	f	class:CameraInteractor
+isNull	QVector3DD.hpp	/^inline bool QVector3DD::isNull() const$/;"	f	class:QVector3DD
+isNumber	qml/QChart.js	/^    function isNumber(n) {$/;"	f
+isOrtho	Camera.hpp	/^  bool       isOrtho;$/;"	m	class:Camera3D
+isVisible	Camera.hpp	/^inline bool Camera::isVisible(const QPolygonF &p) const {$/;"	f	class:Camera
+keyPressEvent	CameraInteractor.cpp	/^void CameraInteractor::keyPressEvent(QKeyEvent *event)$/;"	f	class:CameraInteractor
+keyPressEvent	NcMapView.cpp	/^void NcMapView::keyPressEvent(QKeyEvent *event) {$/;"	f	class:NcMapView
+keyPressEvent	NcQuickView.cpp	/^void NcQuickView::keyPressEvent(QKeyEvent *event)$/;"	f	class:NcQuickView
+labels	qml/QChartGallery.js	/^      labels: ["Eating","Drinking","Sleeping","Designing","Coding","Partying","Running"],$/;"	p
+labels	qml/QChartGallery.js	/^      labels: ["January","February","March","April","May","June","July"],$/;"	p
+lastPos	CameraInteractor.hpp	/^    QPointF    lastPos;$/;"	m	class:CameraInteractor
+length	QVector3DD.cpp	/^double QVector3DD::length() const$/;"	f	class:QVector3DD
+lengthSquared	QVector3DD.cpp	/^double QVector3DD::lengthSquared() const$/;"	f	class:QVector3DD
+loadDefaults	Camera.cpp	/^void Camera3D::loadDefaults()$/;"	f	class:Camera3D
+loadFromFile	Camera.cpp	/^void Camera3D::loadFromFile(const QString &filename)$/;"	f	class:Camera3D
+loadNCFile	NcLoader.cpp	/^void NcLoader::loadNCFile(QString fp)$/;"	f	class:NcLoader
+localViewport	Camera.hpp	/^  QRectF    localViewport;$/;"	m	class:Camera
+lookAt	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::lookAt(const QVector3D& eye, const QVector3D& center, const QVector3D& up)$/;"	f	class:QMatrix4x4D
+lookAt	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::lookAt(const QVector3DD& eye, const QVector3DD& center, const QVector3DD& up)$/;"	f	class:QMatrix4x4D
+lookAt	SimpleCamera.hpp	/^    QPointF lookAt;$/;"	m	class:SimpleCamera
+m	QMatrix4x4D.hpp	/^    double m[4][4];          \/\/ Column-major order to match OpenGL.$/;"	m	class:QMatrix4x4D
+main	main.cpp	/^int main(int argc, char *argv[])$/;"	f
+map	NcQuickView.hpp	/^    NcMapView* map;$/;"	m	class:NcQuickView
+map	QMatrix4x4D.hpp	/^inline QPoint QMatrix4x4D::map(const QPoint& point) const$/;"	f	class:QMatrix4x4D
+map	QMatrix4x4D.hpp	/^inline QPointF QMatrix4x4D::map(const QPointF& point) const$/;"	f	class:QMatrix4x4D
+map	QMatrix4x4D.hpp	/^inline QVector3D QMatrix4x4D::map(const QVector3D& point) const$/;"	f	class:QMatrix4x4D
+map	QMatrix4x4D.hpp	/^inline QVector4D QMatrix4x4D::map(const QVector4D& point) const$/;"	f	class:QMatrix4x4D
+mapRect	QMatrix4x4D.cpp	/^QRect QMatrix4x4D::mapRect(const QRect& rect) const$/;"	f	class:QMatrix4x4D
+mapRect	QMatrix4x4D.cpp	/^QRectF QMatrix4x4D::mapRect(const QRectF& rect) const$/;"	f	class:QMatrix4x4D
+mapToLocal	Camera.cpp	/^QPointF Camera::mapToLocal(const QPointF &p) const$/;"	f	class:Camera
+matMapToScreen	SimpleCamera.hpp	/^    QMatrix4x4D matMapToScreen;$/;"	m	class:SimpleCamera
+matModelView	SimpleCamera.hpp	/^    QMatrix4x4D matModelView;$/;"	m	class:SimpleCamera
+matProj	SimpleCamera.hpp	/^    QMatrix4x4D matProj;$/;"	m	class:SimpleCamera
+matrixDet3	QMatrix4x4D.cpp	/^static inline double matrixDet3$/;"	f	file:
+matrixDet4	QMatrix4x4D.cpp	/^static inline double matrixDet4(const double m[4][4])$/;"	f	file:
+mergeChartConfig	qml/QChart.js	/^    function mergeChartConfig(defaults,userDefined) {$/;"	f
+metaObject	moc_ChartView.cpp	/^const QMetaObject *ChartView::metaObject() const$/;"	f	class:ChartView
+metaObject	moc_NcQuickView.cpp	/^const QMetaObject *NcQuickView::metaObject() const$/;"	f	class:NcQuickView
+mouseDoubleClickEvent	CameraInteractor.cpp	/^void CameraInteractor::mouseDoubleClickEvent(QMouseEvent *event)$/;"	f	class:CameraInteractor
+mouseDoubleClickEvent	NcMapView.cpp	/^void NcMapView::mouseDoubleClickEvent(QMouseEvent *event)$/;"	f	class:NcMapView
+mouseDoubleClickEvent	NcQuickView.cpp	/^void NcQuickView::mouseDoubleClickEvent(QMouseEvent *event)$/;"	f	class:NcQuickView
+mouseMoveEvent	CameraInteractor.cpp	/^void CameraInteractor::mouseMoveEvent(QMouseEvent *event)$/;"	f	class:CameraInteractor
+mouseMoveEvent	NcMapView.cpp	/^void NcMapView::mouseMoveEvent(QMouseEvent *event)$/;"	f	class:NcMapView
+mouseMoveEvent	NcQuickView.cpp	/^void NcQuickView::mouseMoveEvent(QMouseEvent *event)$/;"	f	class:NcQuickView
+mousePressEvent	CameraInteractor.cpp	/^void CameraInteractor::mousePressEvent(QMouseEvent *event)$/;"	f	class:CameraInteractor
+mousePressEvent	NcMapView.cpp	/^void NcMapView::mousePressEvent(QMouseEvent *event)$/;"	f	class:NcMapView
+mousePressEvent	NcQuickView.cpp	/^void NcQuickView::mousePressEvent(QMouseEvent *event)$/;"	f	class:NcQuickView
+mouseReleaseEvent	CameraInteractor.cpp	/^void CameraInteractor::mouseReleaseEvent(QMouseEvent *event)$/;"	f	class:CameraInteractor
+mouseReleaseEvent	NcMapView.cpp	/^void NcMapView::mouseReleaseEvent(QMouseEvent *event)$/;"	f	class:NcMapView
+mouseReleaseEvent	NcQuickView.cpp	/^void NcQuickView::mouseReleaseEvent(QMouseEvent *event)$/;"	f	class:NcQuickView
+nativeViewport	Camera.hpp	/^  QRect     nativeViewport;$/;"	m	class:Camera
+nativeViewport	SimpleCamera.hpp	/^    QRectF nativeViewport;$/;"	m	class:SimpleCamera
+ncFile	NcLoader.hpp	/^    netCDF::NcFile *ncFile;$/;"	m	class:NcLoader
+ncLoader	NcMapView.hpp	/^    NcLoader *ncLoader;$/;"	m	class:NcMapView
+ncRenderingLayer	NcMapView.hpp	/^    NcRenderingLayer *ncRenderingLayer;$/;"	m	class:NcMapView
+nearPlane	Camera.hpp	/^  float      nearPlane;$/;"	m	class:Camera3D
+normal	QVector3DD.cpp	/^QVector3DD QVector3DD::normal$/;"	f	class:QVector3DD
+normal	QVector3DD.cpp	/^QVector3DD QVector3DD::normal(const QVector3DD& v1, const QVector3DD& v2)$/;"	f	class:QVector3DD
+normalMatrix	QMatrix4x4D.cpp	/^QMatrix4x4D QMatrix4x4D::normalMatrix() const$/;"	f	class:QMatrix4x4D
+normalize	QVector3DD.cpp	/^void QVector3DD::normalize()$/;"	f	class:QVector3DD
+normalized	QVector3DD.cpp	/^QVector3DD QVector3DD::normalized() const$/;"	f	class:QVector3DD
+normalizedViewport	Camera.hpp	/^  QRectF    normalizedViewport;$/;"	m	class:Camera
+normalizedViewport	SimpleCamera.hpp	/^    QRectF normalizedViewport;$/;"	m	class:SimpleCamera
+operator !=	QMatrix4x4D.hpp	/^inline bool QMatrix4x4D::operator!=(const QMatrix4x4D& other) const$/;"	f	class:QMatrix4x4D
+operator !=	QVector3DD.hpp	/^inline bool operator!=(const QVector3DD &v1, const QVector3DD &v2)$/;"	f
+operator ()	QMatrix4x4D.hpp	/^inline double QMatrix4x4D::operator()(int row, int column) const$/;"	f	class:QMatrix4x4D
+operator ()	QMatrix4x4D.hpp	/^inline double& QMatrix4x4D::operator()(int row, int column)$/;"	f	class:QMatrix4x4D
+operator *	QMatrix4x4D.hpp	/^inline QMatrix4x4D operator*(const QMatrix4x4D& m1, const QMatrix4x4D& m2)$/;"	f
+operator *	QMatrix4x4D.hpp	/^inline QMatrix4x4D operator*(const QMatrix4x4D& matrix, double factor)$/;"	f
+operator *	QMatrix4x4D.hpp	/^inline QMatrix4x4D operator*(double factor, const QMatrix4x4D& matrix)$/;"	f
+operator *	QMatrix4x4D.hpp	/^inline QPoint operator*(const QMatrix4x4D& matrix, const QPoint& point)$/;"	f
+operator *	QMatrix4x4D.hpp	/^inline QPoint operator*(const QPoint& point, const QMatrix4x4D& matrix)$/;"	f
+operator *	QMatrix4x4D.hpp	/^inline QPointF operator*(const QMatrix4x4D& matrix, const QPointF& point)$/;"	f
+operator *	QMatrix4x4D.hpp	/^inline QPointF operator*(const QPointF& point, const QMatrix4x4D& matrix)$/;"	f
+operator *	QMatrix4x4D.hpp	/^inline QVector2D operator*(const QMatrix4x4D& matrix, const QVector2D& point)$/;"	f
+operator *	QMatrix4x4D.hpp	/^inline QVector2D operator*(const QVector2D& point, const QMatrix4x4D& matrix)$/;"	f
+operator *	QMatrix4x4D.hpp	/^inline QVector3D operator*(const QMatrix4x4D& matrix, const QVector3D& vector)$/;"	f
+operator *	QMatrix4x4D.hpp	/^inline QVector3D operator*(const QVector3D& vector, const QMatrix4x4D& matrix)$/;"	f
+operator *	QMatrix4x4D.hpp	/^inline QVector3DD operator*(const QMatrix4x4D& matrix, const QVector3DD& vector)$/;"	f
+operator *	QMatrix4x4D.hpp	/^inline QVector3DD operator*(const QVector3DD& vector, const QMatrix4x4D& matrix)$/;"	f
+operator *	QMatrix4x4D.hpp	/^inline QVector4D operator*(const QMatrix4x4D& matrix, const QVector4D& vector)$/;"	f
+operator *	QMatrix4x4D.hpp	/^inline QVector4D operator*(const QVector4D& vector, const QMatrix4x4D& matrix)$/;"	f
+operator *	QVector3DD.hpp	/^inline const QVector3DD operator*(const QVector3DD &v1, const QVector3DD& v2)$/;"	f
+operator *	QVector3DD.hpp	/^inline const QVector3DD operator*(const QVector3DD &vector, double factor)$/;"	f
+operator *	QVector3DD.hpp	/^inline const QVector3DD operator*(double factor, const QVector3DD &vector)$/;"	f
+operator *=	QMatrix4x4D.hpp	/^inline QMatrix4x4D& QMatrix4x4D::operator*=(const QMatrix4x4D& other)$/;"	f	class:QMatrix4x4D
+operator *=	QMatrix4x4D.hpp	/^inline QMatrix4x4D& QMatrix4x4D::operator*=(double factor)$/;"	f	class:QMatrix4x4D
+operator *=	QVector3DD.hpp	/^inline QVector3DD &QVector3DD::operator*=(const QVector3DD& vector)$/;"	f	class:QVector3DD
+operator *=	QVector3DD.hpp	/^inline QVector3DD &QVector3DD::operator*=(double factor)$/;"	f	class:QVector3DD
+operator +	QMatrix4x4D.hpp	/^inline QMatrix4x4D operator+(const QMatrix4x4D& m1, const QMatrix4x4D& m2)$/;"	f
+operator +	QVector3DD.hpp	/^inline const QVector3DD operator+(const QVector3DD &v1, const QVector3DD &v2)$/;"	f
+operator +=	QMatrix4x4D.hpp	/^inline QMatrix4x4D& QMatrix4x4D::operator+=(const QMatrix4x4D& other)$/;"	f	class:QMatrix4x4D
+operator +=	QVector3DD.hpp	/^inline QVector3DD &QVector3DD::operator+=(const QVector3DD &vector)$/;"	f	class:QVector3DD
+operator -	QMatrix4x4D.hpp	/^inline QMatrix4x4D operator-(const QMatrix4x4D& m1, const QMatrix4x4D& m2)$/;"	f
+operator -	QMatrix4x4D.hpp	/^inline QMatrix4x4D operator-(const QMatrix4x4D& matrix)$/;"	f
+operator -	QVector3DD.hpp	/^inline const QVector3DD operator-(const QVector3DD &v1, const QVector3DD &v2)$/;"	f
+operator -	QVector3DD.hpp	/^inline const QVector3DD operator-(const QVector3DD &vector)$/;"	f
+operator -=	QMatrix4x4D.hpp	/^inline QMatrix4x4D& QMatrix4x4D::operator-=(const QMatrix4x4D& other)$/;"	f	class:QMatrix4x4D
+operator -=	QVector3DD.hpp	/^inline QVector3DD &QVector3DD::operator-=(const QVector3DD &vector)$/;"	f	class:QVector3DD
+operator /	QMatrix4x4D.cpp	/^QMatrix4x4D operator\/(const QMatrix4x4D& matrix, double divisor)$/;"	f
+operator /	QVector3DD.hpp	/^inline const QVector3DD operator\/(const QVector3DD &vector, double divisor)$/;"	f
+operator /=	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::operator\/=(double divisor)$/;"	f	class:QMatrix4x4D
+operator /=	QVector3DD.hpp	/^inline QVector3DD &QVector3DD::operator\/=(double divisor)$/;"	f	class:QVector3DD
+operator <<	QMatrix4x4D.cpp	/^QDebug operator<<(QDebug dbg, const QMatrix4x4D &m)$/;"	f
+operator <<	QVector3DD.cpp	/^QDataStream &operator<<(QDataStream &stream, const QVector3DD &vector)$/;"	f
+operator <<	QVector3DD.cpp	/^QDebug operator<<(QDebug dbg, const QVector3DD &vector)$/;"	f
+operator ==	QMatrix4x4D.hpp	/^inline bool QMatrix4x4D::operator==(const QMatrix4x4D& other) const$/;"	f	class:QMatrix4x4D
+operator ==	QVector3DD.hpp	/^inline bool operator==(const QVector3DD &v1, const QVector3DD &v2)$/;"	f
+operator >>	QVector3DD.cpp	/^QDataStream &operator>>(QDataStream &stream, QVector3DD &vector)$/;"	f
+operator QVariant	QVector3DD.cpp	/^QVector3DD::operator QVariant() const$/;"	f	class:QVector3DD
+origin	NcMapView.hpp	/^    QPointF origin;$/;"	m	class:NcMapView
+ortho	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::ortho(const QRect& rect)$/;"	f	class:QMatrix4x4D
+ortho	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::ortho(const QRectF& rect)$/;"	f	class:QMatrix4x4D
+ortho	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::ortho(double left, double right, double bottom, double top, double nearPlane, double farPlane)$/;"	f	class:QMatrix4x4D
+orthonormalInverse	QMatrix4x4D.cpp	/^QMatrix4x4D QMatrix4x4D::orthonormalInverse() const$/;"	f	class:QMatrix4x4D
+pEye	Camera.hpp	/^  QVector3DD pEye;$/;"	m	class:Camera3D
+pLookAt	Camera.hpp	/^  QVector3DD pLookAt;$/;"	m	class:Camera3D
+pUp	Camera.hpp	/^  QVector3DD pUp;$/;"	m	class:Camera3D
+packSnorm2x16	QVector3DD.cpp	/^inline uint32_t packSnorm2x16(float lowerF, float higherF)$/;"	f
+packUnorm2x16	QVector3DD.cpp	/^inline uint32_t packUnorm2x16(float lowerF, float higherF)$/;"	f
+paintGL	NcMapView.cpp	/^void NcMapView::paintGL() {$/;"	f	class:NcMapView
+paintGL	NcQuickView.cpp	/^void NcQuickView::paintGL()$/;"	f	class:NcQuickView
+pan	Camera.cpp	/^void Camera2D::pan(const QPointF &anchor, const QPointF &screenDiff)$/;"	f	class:Camera2D
+pan	Camera.cpp	/^void Camera3D::pan(const QPointF &, const QPointF &diff)$/;"	f	class:Camera3D
+pan	Camera.hpp	/^  virtual void pan(const QPointF &anchor, const QPointF &screenDiff) {};$/;"	f	class:Camera
+pan	SimpleCamera.cpp	/^void SimpleCamera::pan(const QPointF &anchor, const QPointF &screenDiff)$/;"	f	class:SimpleCamera
+perspective	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::perspective(double angle, double aspect, double nearPlane, double farPlane)$/;"	f	class:QMatrix4x4D
+pitch	Camera.cpp	/^void Camera3D::pitch(const QPointF &, double diff)$/;"	f	class:Camera3D
+pitch	Camera.hpp	/^  virtual void pitch(const QPointF &anchor, double diff) {};$/;"	f	class:Camera
+pixelScaling	Camera.hpp	/^  float     pixelScaling;$/;"	m	class:Camera
+populateLabels	qml/QChart.js	/^    function populateLabels(labelTemplateString, labels, numberOfSteps, graphMin, stepValue) {$/;"	f
+pos	SimpleCamera.hpp	/^    QPointF pos;$/;"	m	class:SimpleCamera
+print	Camera.cpp	/^void Camera3D::print() const$/;"	f	class:Camera3D
+print	Camera.hpp	/^  virtual void    print() const {}$/;"	f	class:Camera
+printInfo	NcLoader.cpp	/^void NcLoader::printInfo()$/;"	f	class:NcLoader
+qCleanupResources_NcGui	qrc_NcGui.cpp	/^int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_NcGui)()$/;"	f
+qCleanupResources_NcView	qrc_NcView.cpp	/^int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_NcView)()$/;"	f
+qFuzzyCompare	QMatrix4x4D.hpp	/^inline bool qFuzzyCompare(const QMatrix4x4D& m1, const QMatrix4x4D& m2)$/;"	f
+qFuzzyCompare	QVector3DD.hpp	/^inline bool qFuzzyCompare(const QVector3DD& v1, const QVector3DD& v2)$/;"	f
+qGenericMatrixFromMatrix4x4	QMatrix4x4D.hpp	/^QGenericMatrix<N, M, double> qGenericMatrixFromMatrix4x4(const QMatrix4x4D& matrix)$/;"	f
+qGenericMatrixToMatrix4x4	QMatrix4x4D.hpp	/^QMatrix4x4D qGenericMatrixToMatrix4x4(const QGenericMatrix<N, M, double>& matrix)$/;"	f
+qInitResources_NcGui	qrc_NcGui.cpp	/^int QT_RCC_MANGLE_NAMESPACE(qInitResources_NcGui)()$/;"	f
+qInitResources_NcView	qrc_NcView.cpp	/^int QT_RCC_MANGLE_NAMESPACE(qInitResources_NcView)()$/;"	f
+qt_meta_data_ChartView	moc_ChartView.cpp	/^static const uint qt_meta_data_ChartView[] = {$/;"	v	file:
+qt_meta_data_NcQuickView	moc_NcQuickView.cpp	/^static const uint qt_meta_data_NcQuickView[] = {$/;"	v	file:
+qt_meta_stringdata_ChartView	moc_ChartView.cpp	/^static const qt_meta_stringdata_ChartView_t qt_meta_stringdata_ChartView = {$/;"	v	file:
+qt_meta_stringdata_ChartView_t	moc_ChartView.cpp	/^struct qt_meta_stringdata_ChartView_t {$/;"	s	file:
+qt_meta_stringdata_NcQuickView	moc_NcQuickView.cpp	/^static const qt_meta_stringdata_NcQuickView_t qt_meta_stringdata_NcQuickView = {$/;"	v	file:
+qt_meta_stringdata_NcQuickView_t	moc_NcQuickView.cpp	/^struct qt_meta_stringdata_NcQuickView_t {$/;"	s	file:
+qt_metacall	moc_ChartView.cpp	/^int ChartView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:ChartView
+qt_metacall	moc_NcQuickView.cpp	/^int NcQuickView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:NcQuickView
+qt_metacast	moc_ChartView.cpp	/^void *ChartView::qt_metacast(const char *_clname)$/;"	f	class:ChartView
+qt_metacast	moc_NcQuickView.cpp	/^void *NcQuickView::qt_metacast(const char *_clname)$/;"	f	class:NcQuickView
+qt_resource_data	qrc_NcGui.cpp	/^static const unsigned char qt_resource_data[] = {$/;"	v	file:
+qt_resource_data	qrc_NcView.cpp	/^static const unsigned char qt_resource_data[] = {$/;"	v	file:
+qt_resource_name	qrc_NcGui.cpp	/^static const unsigned char qt_resource_name[] = {$/;"	v	file:
+qt_resource_name	qrc_NcView.cpp	/^static const unsigned char qt_resource_name[] = {$/;"	v	file:
+qt_resource_struct	qrc_NcGui.cpp	/^static const unsigned char qt_resource_struct[] = {$/;"	v	file:
+qt_resource_struct	qrc_NcView.cpp	/^static const unsigned char qt_resource_struct[] = {$/;"	v	file:
+qt_static_metacall	moc_ChartView.cpp	/^void ChartView::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:ChartView
+qt_static_metacall	moc_NcQuickView.cpp	/^void NcQuickView::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:NcQuickView
+render	Camera.cpp	/^void Camera3DRenderer::render(Camera3D* camera)$/;"	f	class:Camera3DRenderer
+render	NcRenderingLayer.cpp	/^void NcRenderingLayer::render(NcMapView *view)$/;"	f	class:NcRenderingLayer
+resetVisibility	Camera.cpp	/^void Camera::resetVisibility()$/;"	f	class:Camera
+resizeEvent	NcQuickView.cpp	/^void NcQuickView::resizeEvent(QResizeEvent *e)$/;"	f	class:NcQuickView
+resizeGL	NcMapView.cpp	/^void NcMapView::resizeGL(int width, int height) {$/;"	f	class:NcMapView
+reversedPitch	Camera.cpp	/^void Camera3D::reversedPitch(float focus, double diff)$/;"	f	class:Camera3D
+reversedPitch	Camera.hpp	/^  virtual void reversedPitch(float focus, double diff) {};$/;"	f	class:Camera
+reversedRoll	Camera.hpp	/^  virtual void reversedRoll(float focus, double diff) {};$/;"	f	class:Camera
+reversedYaw	Camera.cpp	/^void Camera3D::reversedYaw(float focus, double diff)$/;"	f	class:Camera3D
+reversedYaw	Camera.hpp	/^  virtual void reversedYaw(float focus, double diff) {};$/;"	f	class:Camera
+roll	Camera.hpp	/^  virtual void roll(const QPointF &anchor, double diff) {};$/;"	f	class:Camera
+rotate	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::rotate(const QQuaternion& quaternion)$/;"	f	class:QMatrix4x4D
+rotate	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::rotate(double angle, const QVector3D& vector)$/;"	f	class:QMatrix4x4D
+rotate	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::rotate(double angle, const QVector3DD& vector)$/;"	f	class:QMatrix4x4D
+rotate	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::rotate(double angle, double x, double y, double z)$/;"	f	class:QMatrix4x4D
+row	QMatrix4x4D.hpp	/^inline QVector4D QMatrix4x4D::row(int index) const$/;"	f	class:QMatrix4x4D
+run	NcGui.cpp	/^void NcGui::run()$/;"	f	class:NcGui
+scale	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::scale(const QVector3D& vector)$/;"	f	class:QMatrix4x4D
+scale	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::scale(const QVector3DD& vector)$/;"	f	class:QMatrix4x4D
+scale	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::scale(double factor)$/;"	f	class:QMatrix4x4D
+scale	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::scale(double x, double y)$/;"	f	class:QMatrix4x4D
+scale	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::scale(double x, double y, double z)$/;"	f	class:QMatrix4x4D
+screen2world	Camera.hpp	/^inline QPointF Camera::screen2world(const QPointF &screen) const$/;"	f	class:Camera
+screen2world	Camera.hpp	/^inline QVector3DD Camera::screen2world(const QPointF &screen, double depth) const$/;"	f	class:Camera
+screen2world	SimpleCamera.cpp	/^const QPointF &SimpleCamera::screen2world(const QPointF &screen)$/;"	f	class:SimpleCamera
+screenPos	CameraInteractor.hpp	/^    QPointF    screenPos;$/;"	m	class:CameraInteractor
+screenViewport	Camera.hpp	/^  QRectF    screenViewport;$/;"	m	class:Camera
+screenViewport	SimpleCamera.hpp	/^    QRectF screenViewport;$/;"	m	class:SimpleCamera
+setCamera	CameraInteractor.cpp	/^void CameraInteractor::setCamera(SimpleCamera *cam)$/;"	f	class:CameraInteractor
+setCenter	Camera.cpp	/^void Camera2D::setCenter(const QPointF &center)$/;"	f	class:Camera2D
+setClippingRange	Camera.cpp	/^void Camera3D::setClippingRange(float nearPlane, float farPlane)$/;"	f	class:Camera3D
+setColumn	QMatrix4x4D.hpp	/^inline void QMatrix4x4D::setColumn(int index, const QVector4D& value)$/;"	f	class:QMatrix4x4D
+setEye	Camera.cpp	/^void Camera3D::setEye(const QVector3DD &eye)$/;"	f	class:Camera3D
+setIsOrtho	Camera.cpp	/^void Camera3D::setIsOrtho(bool isOrtho)$/;"	f	class:Camera3D
+setLookAt	Camera.cpp	/^void Camera3D::setLookAt(const QVector3DD &lookat)$/;"	f	class:Camera3D
+setNormalizedViewport	Camera.cpp	/^void Camera::setNormalizedViewport(const QRectF &nvp)$/;"	f	class:Camera
+setNormalizedViewport	SimpleCamera.cpp	/^void SimpleCamera::setNormalizedViewport(const QRectF &nvp)$/;"	f	class:SimpleCamera
+setOrtho	Camera.cpp	/^void Camera3D::setOrtho(double left, double right, double bottom, double top, double nearPlane, double farPlane)$/;"	f	class:Camera3D
+setParameters	Camera.cpp	/^void Camera3D::setParameters(float vAngle, float nearPlane, float farPlane)$/;"	f	class:Camera3D
+setPositions	Camera.cpp	/^void Camera3D::setPositions(const QVector3DD &eye, const QVector3DD &lookat, const QVector3DD &up)$/;"	f	class:Camera3D
+setRow	QMatrix4x4D.hpp	/^inline void QMatrix4x4D::setRow(int index, const QVector4D& value)$/;"	f	class:QMatrix4x4D
+setToIdentity	QMatrix4x4D.hpp	/^inline void QMatrix4x4D::setToIdentity()$/;"	f	class:QMatrix4x4D
+setUp	Camera.cpp	/^void Camera3D::setUp(const QVector3DD &up)$/;"	f	class:Camera3D
+setVerticalAngle	Camera.cpp	/^void Camera3D::setVerticalAngle(float vAngle)$/;"	f	class:Camera3D
+setViewport	Camera.cpp	/^void Camera::setViewport(int width, int height, int dpr, float zf)$/;"	f	class:Camera
+setViewport	SimpleCamera.cpp	/^void SimpleCamera::setViewport(int width, int height, int dpr)$/;"	f	class:SimpleCamera
+setWorldCenter	Camera.cpp	/^void Camera2D::setWorldCenter(const QPointF &center)$/;"	f	class:Camera2D
+setWorldViewport	Camera.cpp	/^void Camera::setWorldViewport(const QRectF &wvp)$/;"	f	class:Camera
+setX	QVector3DD.hpp	/^inline void QVector3DD::setX(double aX) { xp = aX; }$/;"	f	class:QVector3DD
+setY	QVector3DD.hpp	/^inline void QVector3DD::setY(double aY) { yp = aY; }$/;"	f	class:QVector3DD
+setZ	QVector3DD.hpp	/^inline void QVector3DD::setZ(double aZ) { zp = aZ; }$/;"	f	class:QVector3DD
+setZoomLevel	Camera.cpp	/^void Camera2D::setZoomLevel(float level)$/;"	f	class:Camera2D
+setup	Camera.cpp	/^void Camera3DRenderer::setup(Camera3D* camera)$/;"	f	class:Camera3DRenderer
+setupViewport	NcMapView.cpp	/^void NcMapView::setupViewport(int width, int height)$/;"	f	class:NcMapView
+shader	Camera.hpp	/^    QOpenGLShaderProgram *shader;$/;"	m	class:Camera3DRenderer
+shader	NcRenderingLayer.hpp	/^    QOpenGLShaderProgram* shader;$/;"	m	class:NcRenderingLayer
+shaderInitialized	Camera.hpp	/^    bool shaderInitialized;$/;"	m	class:Camera3DRenderer
+showHideChart	moc_NcQuickView.cpp	/^void NcQuickView::showHideChart()$/;"	f	class:NcQuickView
+showHideToggle	ChartView.cpp	/^void ChartView::showHideToggle()$/;"	f	class:ChartView
+staticMetaObject	moc_ChartView.cpp	/^const QMetaObject ChartView::staticMetaObject = {$/;"	m	class:ChartView	file:
+staticMetaObject	moc_NcQuickView.cpp	/^const QMetaObject NcQuickView::staticMetaObject = {$/;"	m	class:NcQuickView	file:
+stringdata0	moc_ChartView.cpp	/^    char stringdata0[26];$/;"	m	struct:qt_meta_stringdata_ChartView_t	file:
+stringdata0	moc_NcQuickView.cpp	/^    char stringdata0[53];$/;"	m	struct:qt_meta_stringdata_NcQuickView_t	file:
+tex	NcRenderingLayer.hpp	/^    GLuint                tex;$/;"	m	class:NcRenderingLayer
+toAffine	QMatrix4x4D.cpp	/^QMatrix QMatrix4x4D::toAffine() const$/;"	f	class:QMatrix4x4D
+toGenericMatrix	QMatrix4x4D.hpp	/^QGenericMatrix<N, M, Real> QMatrix4x4D::toGenericMatrix() const$/;"	f	class:QMatrix4x4D
+toPackedNormal	QVector3DD.cpp	/^uint32_t QVector3DD::toPackedNormal() const$/;"	f	class:QVector3DD
+toPoint	QVector3DD.hpp	/^inline QPoint QVector3DD::toPoint() const$/;"	f	class:QVector3DD
+toPointF	QVector3DD.hpp	/^inline QPointF QVector3DD::toPointF() const$/;"	f	class:QVector3DD
+toSpherical	QVector3DD.cpp	/^QPointF QVector3DD::toSpherical() const$/;"	f	class:QVector3DD
+toTransform	QMatrix4x4D.cpp	/^QTransform QMatrix4x4D::toTransform() const$/;"	f	class:QMatrix4x4D
+toValueArray	QMatrix4x4D.cpp	/^void QMatrix4x4D::toValueArray(double *values) const$/;"	f	class:QMatrix4x4D
+toVector2D	QVector3DD.cpp	/^QVector2D QVector3DD::toVector2D() const$/;"	f	class:QVector3DD
+toVector3D	QVector3DD.cpp	/^QVector3D QVector3DD::toVector3D() const$/;"	f	class:QVector3DD
+toVector4D	QVector3DD.cpp	/^QVector4D QVector3DD::toVector4D() const$/;"	f	class:QVector3DD
+totalSize	Camera.hpp	/^  QSizeF    totalSize;$/;"	m	class:Camera
+translate	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::translate(const QVector3D& vector)$/;"	f	class:QMatrix4x4D
+translate	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::translate(const QVector3DD& vector)$/;"	f	class:QMatrix4x4D
+translate	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::translate(double x, double y)$/;"	f	class:QMatrix4x4D
+translate	QMatrix4x4D.cpp	/^QMatrix4x4D& QMatrix4x4D::translate(double x, double y, double z)$/;"	f	class:QMatrix4x4D
+translation	Camera.hpp	/^  QPointF   translation;$/;"	m	class:Camera
+transposed	QMatrix4x4D.cpp	/^QMatrix4x4D QMatrix4x4D::transposed() const$/;"	f	class:QMatrix4x4D
+update	SimpleCamera.cpp	/^void SimpleCamera::update()$/;"	f	class:SimpleCamera
+updateCurrentVisibility	Camera.cpp	/^void Camera::updateCurrentVisibility(VisibilityTest vis)$/;"	f	class:Camera
+updateData	NcMapView.cpp	/^void NcMapView::updateData()$/;"	f	class:NcMapView
+updateView	NcMapView.cpp	/^void NcMapView::updateView()$/;"	f	class:NcMapView
+updateViewport	Camera.cpp	/^void Camera2D::updateViewport()$/;"	f	class:Camera2D
+updateViewport	Camera.cpp	/^void Camera3D::updateViewport()$/;"	f	class:Camera3D
+updateViewport	SimpleCamera.cpp	/^void SimpleCamera::updateViewport()$/;"	f	class:SimpleCamera
+updateWorldPositions	Camera.cpp	/^void Camera3D::updateWorldPositions()$/;"	f	class:Camera3D
+updateWorldPositions	Camera.cpp	/^void Camera3DGround::updateWorldPositions()$/;"	f	class:Camera3DGround
+vao	Camera.hpp	/^    GLuint                vao;$/;"	m	class:Camera3DRenderer
+vao	NcRenderingLayer.hpp	/^    GLuint                vao;$/;"	m	class:NcRenderingLayer
+vbo	Camera.hpp	/^    GLuint                vbo;$/;"	m	class:Camera3DRenderer
+vbo	NcRenderingLayer.hpp	/^    GLuint                vbo;$/;"	m	class:NcRenderingLayer
+verticalAngle	Camera.hpp	/^  float      verticalAngle;$/;"	m	class:Camera3D
+view	CameraInteractor.hpp	/^    NcMapView   * view;$/;"	m	class:CameraInteractor
+view	NcGui.hpp	/^    NcQuickView *view;$/;"	m	class:NcGui
+viewport	NcGui.hpp	/^    float viewport[4];$/;"	m	class:NcGui
+visCurrent	Camera.hpp	/^  VisibilityTest   visCurrent;$/;"	m	class:Camera
+visRendering	Camera.hpp	/^  VisibilityTest   visRendering;$/;"	m	class:Camera
+wBottom	Camera.hpp	/^  double     wBottom;$/;"	m	class:Camera3D
+wBounds	NcMapView.hpp	/^    QRectF wBounds;$/;"	m	class:NcMapView
+wEye	Camera.hpp	/^  QVector3DD wEye;$/;"	m	class:Camera3D
+wEyeDir	Camera.hpp	/^  QVector3DD wEyeDir;$/;"	m	class:Camera3D
+wEyeLength	Camera.hpp	/^  double     wEyeLength;$/;"	m	class:Camera3D
+wFar	Camera.hpp	/^  double     wFar;$/;"	m	class:Camera3D
+wHeadLight	Camera.hpp	/^  QVector3DD wHeadLight;$/;"	m	class:Camera3D
+wHeadLightTransformed	Camera.hpp	/^  QVector3DD wHeadLightTransformed;$/;"	m	class:Camera3D
+wLeft	Camera.hpp	/^  double     wLeft;$/;"	m	class:Camera3D
+wLookAt	Camera.hpp	/^  QVector3DD wLookAt;$/;"	m	class:Camera3D
+wNear	Camera.hpp	/^  double     wNear;$/;"	m	class:Camera3D
+wRight	Camera.hpp	/^  double     wRight;$/;"	m	class:Camera3D
+wTop	Camera.hpp	/^  double     wTop;$/;"	m	class:Camera3D
+wUp	Camera.hpp	/^  QVector3DD wUp;$/;"	m	class:Camera3D
+world2geo	Camera.hpp	/^inline QPointF Camera::world2geo(const QPointF &world)$/;"	f	class:Camera
+world2screen	Camera.hpp	/^inline QPointF Camera2D::world2screen(const QPointF &world) const$/;"	f	class:Camera2D
+world2viewport	Camera.hpp	/^inline QVector3DD Camera::world2viewport(const QVector3DD &p) const$/;"	f	class:Camera
+world2zoom	Camera.hpp	/^inline QPointF Camera2D::world2zoom(const QPointF &world) const$/;"	f	class:Camera2D
+worldBounds	Camera.hpp	/^  QLineF    worldBounds[4];$/;"	m	class:Camera
+worldCenter	Camera.hpp	/^  QPointF         worldCenter;$/;"	m	class:Camera2D
+worldViewport	Camera.hpp	/^  QRectF    worldViewport;$/;"	m	class:Camera
+x	QVector3DD.hpp	/^inline double QVector3DD::x() const { return double(xp); }$/;"	f	class:QVector3DD
+xp	QVector3DD.hpp	/^    double xp, yp, zp;$/;"	m	class:QVector3DD
+y	QVector3DD.hpp	/^inline double QVector3DD::y() const { return double(yp); }$/;"	f	class:QVector3DD
+yaw	Camera.cpp	/^void Camera3D::yaw(const QPointF &, double diff)$/;"	f	class:Camera3D
+yaw	Camera.hpp	/^  virtual void yaw(const QPointF &anchor, double diff) {};$/;"	f	class:Camera
+yp	QVector3DD.hpp	/^    double xp, yp, zp;$/;"	m	class:QVector3DD
+z	QVector3DD.hpp	/^inline double QVector3DD::z() const { return double(zp); }$/;"	f	class:QVector3DD
+zoom	Camera.cpp	/^void Camera2D::zoom(const QPointF &anchor, double diff)$/;"	f	class:Camera2D
+zoom	Camera.cpp	/^void Camera3D::zoom(const QPointF &, double diff)$/;"	f	class:Camera3D
+zoom	Camera.hpp	/^  virtual void zoom(const QPointF &anchor, double diff) {};$/;"	f	class:Camera
+zoom	SimpleCamera.cpp	/^void SimpleCamera::zoom(const QPointF &a, double diff)$/;"	f	class:SimpleCamera
+zoom2world	Camera.hpp	/^inline QPointF Camera2D::zoom2world(const QPointF &zoom) const$/;"	f	class:Camera2D
+zoomFactor	Camera.hpp	/^  float     zoomFactor;$/;"	m	class:Camera
+zoomFactor	NcMapView.hpp	/^    float zoomFactor;$/;"	m	class:NcMapView
+zoomLevel	Camera.hpp	/^  float     zoomLevel;$/;"	m	class:Camera
+zoomLevel	SimpleCamera.hpp	/^    float zoomLevel;$/;"	m	class:SimpleCamera
+zp	QVector3DD.hpp	/^    double xp, yp, zp;$/;"	m	class:QVector3DD
+~Camera	Camera.cpp	/^Camera::~Camera()$/;"	f	class:Camera
+~Camera2D	Camera.cpp	/^Camera2D::~Camera2D()$/;"	f	class:Camera2D
+~CameraInteractor	CameraInteractor.cpp	/^CameraInteractor::~CameraInteractor()$/;"	f	class:CameraInteractor
+~ChartView	ChartView.cpp	/^ChartView::~ChartView()$/;"	f	class:ChartView
+~NcGui	NcGui.cpp	/^NcGui::~NcGui()$/;"	f	class:NcGui
+~NcLoader	NcLoader.cpp	/^NcLoader::~NcLoader()$/;"	f	class:NcLoader
+~NcQuickView	NcQuickView.cpp	/^NcQuickView::~NcQuickView()$/;"	f	class:NcQuickView
+~NcRenderingLayer	NcRenderingLayer.cpp	/^NcRenderingLayer::~NcRenderingLayer()$/;"	f	class:NcRenderingLayer
+~initializer	qrc_NcGui.cpp	/^       ~initializer() { QT_RCC_MANGLE_NAMESPACE(qCleanupResources_NcGui)(); }$/;"	f	struct:__anon2::initializer
+~initializer	qrc_NcView.cpp	/^       ~initializer() { QT_RCC_MANGLE_NAMESPACE(qCleanupResources_NcView)(); }$/;"	f	struct:__anon3::initializer
