@@ -3,7 +3,7 @@
 
 #include "basegui.hpp"
 #include "NcQuickView.hpp"
-#include "ChartView.hpp"
+//#include "ChartView.hpp"
 
 class NcGui : public BaseGui
 {
@@ -17,7 +17,7 @@ private:
     // main window
     NcQuickView *view;
     // chart window
-    ChartView* dlg;
+//    ChartView* dlg;
 
     // parameters
     bool fullscreen;

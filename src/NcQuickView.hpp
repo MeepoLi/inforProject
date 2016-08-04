@@ -6,6 +6,8 @@
 #include <QVector>
 #include <QRectF>
 #include <QQuickView>
+#include <QGuiApplication>
+#include <QQuickItem>
 
 #include "NcMapView.hpp"
 #include "NcLoader.hpp"

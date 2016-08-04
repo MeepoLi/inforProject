@@ -9,7 +9,7 @@
 #include "CameraInteractor.hpp"
 #include "SimpleCamera.hpp"
 #include "NcRenderingLayer.hpp"
-
+#include <QQmlProperty>
 class NcRenderingLayer;
 
 class NcMapView : public QGLWidget
@@ -30,6 +30,7 @@ public:
     SimpleCamera *cam();
     const QPointF &getOrigin();
     const QRectF &getGeoBounds();
+	const int getTimestamp();
     int getWidth();
     int getHeight();
     void updateData();

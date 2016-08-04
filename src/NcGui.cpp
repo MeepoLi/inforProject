@@ -15,8 +15,8 @@ NcGui::NcGui(): fullscreen(false)
     this->view->setGeometry(200,200,800,600);
 
     // chart dialog
-    this->dlg = new ChartView();
-    this->dlg->setGeometry(250,250,640,480);
+ //   this->dlg = new ChartView();
+ //   this->dlg->setGeometry(250,250,640,480);
 }
 
 NcGui::~NcGui()
@@ -28,7 +28,11 @@ NcGui::~NcGui()
 void NcGui::run()
 {
     // main window
-   // this->view->setSource(QUrl("qrc:/qml/Main.qml"));
+    this->view->setSource(QUrl("qrc:/qml/Main.qml"));
+//	QObject *obj = this->view->rootObject();
+//  	QObject *test = obj->findChild<QObject*>("ball");
+//	if (test) qDebug()<<"find!";
+//	else qDebug()<<"not find";
 //try qml first
 
    // chart dialog
@@ -48,5 +52,5 @@ void NcGui::run()
 void NcGui::connectSlots()
 {
     // chart toggle
-    QObject::connect(this->view, SIGNAL(showHideChart()), this->dlg, SLOT(showHideToggle()));
+ //   QObject::connect(this->view, SIGNAL(showHideChart()), this->dlg, SLOT(showHideToggle()));
 }

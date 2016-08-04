@@ -19,15 +19,7 @@ void SimpleCamera::setWorldCenter( const QPointF &center)
 
 void SimpleCamera::updateMousePosition(const QPointF mousePosition)
 {
-//	this->mousePos = this->screen2world(mousePosition);
-	//this->mousePos.setX(mousePosition.x()/this->screenViewport.width());	
-	//this->mousePos.setY(1 - mousePosition.y()/this->screenViewport.height());
-	//
-//	qDebug()<<"height = "<< this->screenViewport.height();
-//	qDebug()<<"width  = "<< this->screenViewport.width();
-// 	qDebug()<< "mouseClickPos"<<mousePosition;	
-//	qDebug()<< "mouseClickPos"<<this->mousePos;
-//	qDebug()<< "ca = "<< mousePosition.x()/this->screenViewport.width();
+	this->mousePos = this->screen2world(mousePosition);
 	return;
 }
 void SimpleCamera::pan(const QPointF &anchor, const QPointF &screenDiff)
@@ -54,7 +46,7 @@ void SimpleCamera::zoom(const QPointF &a, double diff)
 		QPointF windowMid = QPointF(0.5,0.5);
 		this->mousePos =  screen2world(a);
 		QPointF screenMidTransfer = (oldZoom / this->zoomLevel) * ( windowMid - this->mousePos) + this->mousePos - windowMid;
-		qWarning()<<"pos = "<< pos<<"  screenMidTransfer = " << screenMidTransfer;
+	//	qWarning()<<"pos = "<< pos<<"  screenMidTransfer = " << screenMidTransfer;
    	 	this->pos = this->pos + screenMidTransfer/oldZoom;	
 	    this->update();
 	}
@@ -85,23 +77,16 @@ void SimpleCamera::updateViewport()
 }
 void SimpleCamera::update()
 {
-//    this->matModelView.setToIdentity();
-//    return;
     QVector2D direction = QVector2D(this->lookAt - this->pos);//.normalized();
     double dirFactor = this->zoomLevel;
 //-----------glTransform
 //
     this->matModelView.setToIdentity();
 	double diff = 1 - this->zoomLevel;
-//	this->matModelView.translate(0.5,0.5);
 	QPointF translate =-this-> pos + (QPointF(0.5,0.5)  + this->pos) * diff;
-	qDebug()<<"diff = "<< diff<<" pos = "<<this->pos<< " trans = "<< translate ; 
     
 //	this->matModelView.translate(-this->pos.x() + (0.5 + this->pos.x()) * diff , -this->pos.y() + (0.5 + this->pos.y()) * diff,0);
-  // 	this->matModelView.translate(-this->pos.x(), -this->pos.y(), 0);
-   //
     this->matModelView.translate(translate.x(), translate.y(), 0);
-    
 	this->matModelView.scale(this->zoomLevel);
 	
     

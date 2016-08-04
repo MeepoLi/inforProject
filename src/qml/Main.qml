@@ -1,18 +1,8 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
-import QtWebKit 3.0
 import QtQuick.Controls 1.2
 //import jbQuick.Charts 1.0
 
-//import "QChart.js" as Charts
-//import "qrc:/qml/QChart.js" as Charts
-///import "qrc:/qml"
-//import "qrc:/qml/jbQuick/Charts/QChart.js"        as Charts
-//import "qrc:/qml/QChartGallery.js" as ChartsData
-//import "qrc:/QChart.js" as Charts
-//import "./QChart.js" as Charts
-//import "./qml/jbQuick/Charts/QChart.js" as Charts
-//import "../src/qml/QChart.js" as Charts
 
 //Text {
 //    id: output
@@ -23,161 +13,40 @@ import QtQuick.Controls 1.2
 
 
 Rectangle {
+	id: root
+	width: 800; height:600
 
-  property int chart_width: 300;
-  property int chart_height: 300;
-  property int chart_spacing: 20;
-  property int text_height: 80;
-  property int row_height: 8;
-
-  color: "#ffffff";
-  width: chart_width*3 + 2*chart_spacing;
-  height: chart_height*2 + chart_spacing + 2*row_height + text_height;
-
-// /////////////////////////////////////////////////////////////////
-// Header
-// /////////////////////////////////////////////////////////////////
-
-  Rectangle { color: "#282b36"; width: parent.width/1.0; height: row_height; }
-  Rectangle { color: "#f33e6f"; width: parent.width/3.0; height: row_height; x: 0*width; y: height; }
-  Rectangle { color: "#46bfbd"; width: parent.width/3.0; height: row_height; x: 1*width; y: height; }
-  Rectangle { color: "#fbd45c"; width: parent.width/3.0; height: row_height; x: 2*width; y: height; }
-
-  Text {
-
-    y: 2*row_height;
-
-    width: parent.width;
-    height: text_height;
-
-    text: "QChart.js";
-    font.pointSize: 32;
-
-    horizontalAlignment: Text.AlignHCenter;
-    verticalAlignment: Text.AlignVCenter;
-
-    Rectangle {
-
-      id: button;
-
-      anchors.top:  parent.top;
-      anchors.topMargin: (parent.height-parent.font.pointSize)/2;
-      anchors.right: parent.right;
-      anchors.rightMargin: (parent.height-parent.font.pointSize)/2;
-
-      width: 100;
-      height: 32;
-
-      color: "#2d91ea";
-      radius: 8;
-
-      Text {
-        anchors.centerIn: parent;
-        color: "#ffffff";
-        text: "Repaint";
-        font.bold: true;
-      }
-
-      MouseArea {
-        anchors.fill: parent;
-        onPressed: {
-          button.color = "#1785e6"
-        }
-        onReleased: {
-          button.color = "#2d91ea"
-          chart_bar.repaint();
-          chart_doughnut.repaint();
-          chart_line.repaint();
-          chart_pie.repaint();
-          chart_polar.repaint();
-          chart_radar.repaint();
-        }
-      }
-    }
-  }
-
-// /////////////////////////////////////////////////////////////////
-// Body
-// /////////////////////////////////////////////////////////////////
-/*
-  Grid {
-
-    id: layout;
-
-    x: 0;
-    y: 2*row_height + text_height;
-
-    width: parent.width;
-    height: parent.height - 2*row_height - text_height;
-
-    columns: 3;
-    spacing: chart_spacing;
-
-    Chart {
-      id: chart_line;
-      width: chart_width;
-      height: chart_height;
-      chartAnimated: true;
-      chartAnimationEasing: Easing.InOutElastic;
-      chartAnimationDuration: 2000;
-      chartData: ChartsData.ChartLineData;
-      chartType: Charts.ChartType.LINE;
-    }
-
-    Chart {
-      id: chart_polar;
-      width: chart_width;
-      height: chart_height;
-      chartAnimated: true;
-      chartAnimationEasing: Easing.InBounce;
-      chartAnimationDuration: 2000;
-      chartData: ChartsData.ChartPolarData;
-      chartType: Charts.ChartType.POLAR;
-    }
-
-    Chart {
-      id: chart_radar;
-      width: chart_width;
-      height: chart_height;
-      chartAnimated: true;
-      chartAnimationEasing: Easing.OutBounce;
-      chartAnimationDuration: 2000;
-      chartData: ChartsData.ChartRadarData;
-      chartType: Charts.ChartType.RADAR;
-    }
-
-    Chart {
-      id: chart_pie;
-      width: chart_width;
-      height: chart_height;
-      chartAnimated: true;
-      chartAnimationEasing: Easing.Linear;
-      chartAnimationDuration: 2000;
-      chartData: ChartsData.ChartPieData;
-      chartType: Charts.ChartType.PIE;
-    }
-
-    Chart {
-      id: chart_bar;
-      width: chart_width;
-      height: chart_height;
-      chartAnimated: true;
-      chartAnimationEasing: Easing.OutBounce;
-      chartAnimationDuration: 2000;
-      chartData: ChartsData.ChartBarData;
-      chartType: Charts.ChartType.BAR;
-    }
-
-    Chart {
-      id: chart_doughnut;
-      width: chart_width;
-      height: chart_height;
-      chartAnimated: true;
-      chartAnimationEasing: Easing.OutElastic;
-      chartAnimationDuration: 2000;
-      chartData: ChartsData.ChartDoughnutData;
-      chartType: Charts.ChartType.DOUGHNUT;
-    }
-  }
-  */
+	color: "#00FFFFFF"
+//	border.color: "#F00"
+//	border.width: 2
+	Text {
+		id: text
+		//text: "hello"
+		y:30
+		anchors.horizontalCenter: page.horizontalCenter
+		font.pointSize: 24; font.bold: true
+	}
+	Rectangle {
+		height: 50; width: root.width
+		x:0
+		y:root.height-height
+		color: "#FFFFFF"
+	}
+	Rectangle {
+		id: ball
+		objectName: "ball"
+		height:  50; width: 10
+		x: 0
+		y: root.height - height
+		color: "#990000FF"
+	}
+	SequentialAnimation {
+		running: true; loops: Animation.Infinite
+	
+		//NumberAnimation{ target: ball; property: "x"; to: root.width - ball.width  ; duration:1000; easing.type: Easing.OutBounce}
+		//PauseAnimation{ duration:1000 }
+		//NumberAnimation{ target: ball; property: "x"; to: 0; duration: 1000; easing.type: Easing.OutBounce }
+		//PauseAnimation{ duration: 1000}
+	
+	}
 }

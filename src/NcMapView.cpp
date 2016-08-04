@@ -32,21 +32,19 @@ void NcMapView::keyPressEvent(QKeyEvent *event) {
         this->interactor->keyPressEvent(event);
     event->accept();
     int key = event->key();
-    switch (key) {
-    case Qt::Key_Left:
-    {
-        currentTimestep = std::max(0, currentTimestep-1);
-        this->updateData();
-        this->updateView();
-    }
-        break;
-    case Qt::Key_Right:
-    {
-        currentTimestep++;
-        this->updateData();
-        this->updateView();
-    }
-        break;
+
+	
+	switch (key) {
+	    case Qt::Key_Left:
+    	    currentTimestep = std::max(0, currentTimestep-1);
+       		this->updateData();
+       	 	this->updateView();
+        	break;
+   		case Qt::Key_Right:
+        	currentTimestep++;
+        	this->updateData();
+        	this->updateView();
+        	break;
     }
 }
 
@@ -99,7 +97,10 @@ SimpleCamera *NcMapView::cam()
 {
     return this->cams;
 }
-
+const int NcMapView::getTimestamp()
+{
+	return this->currentTimestep;
+}
 const QPointF &NcMapView::getOrigin()
 {
     return this->origin;

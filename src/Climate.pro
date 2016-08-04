@@ -1,6 +1,6 @@
 TEMPLATE = app
 
-QT += qml quick widgets opengl core webkitwidgets quickwidgets
+QT += gui qml quick widgets opengl core quickwidgets
 
 TARGET = Climate
 CONFIG += console
@@ -18,7 +18,6 @@ SOURCES += main.cpp \
     NcQuickView.cpp \
     NcMapView.cpp \
     NcGui.cpp \
-    ChartView.cpp
 
 
 # Unix configuration
@@ -59,7 +58,6 @@ HEADERS += \
     NcMapView.hpp \
     NcQuickView.hpp \
     NcGui.hpp \
-    ChartView.hpp \
     basegui.hpp
 
 include(deployment.pri)

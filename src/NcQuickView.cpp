@@ -125,10 +125,17 @@ void NcQuickView::keyPressEvent(QKeyEvent *event)
 {
     QQuickView::keyPressEvent(event);
     if (event->isAccepted()) return;
-
+	QObject *obj = this->rootObject();
+	QObject *timeLine = obj->findChild<QObject*>("ball");
+	
     switch(event->key()){
          default:
             this->map->keyPressEvent(event);
     }
+
+	int timeStamp = this->map->getTimestamp();
+	if (timeLine)
+		timeLine->setProperty("x",timeStamp * 10);	
+	else qDebug()<<"didnt find QML component";
     NcQuickView::update();
 }
