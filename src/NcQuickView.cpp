@@ -6,6 +6,8 @@
 #include <algorithm>
 #include <iostream>
 
+
+
 void NcQuickView::ensureOpenGLFormat()
 {
     QSurfaceFormat glf = QSurfaceFormat::defaultFormat();
@@ -104,7 +106,14 @@ void NcQuickView::mouseDoubleClickEvent(QMouseEvent *event)
 void NcQuickView::mouseMoveEvent(QMouseEvent *event)
 {
     QQuickView::mouseMoveEvent(event);
-    if (event->isAccepted()) return;
+	QObject *obj = this->rootObject();
+	QObject *timeLine = obj->findChild<QObject*>("slideBar");
+	int timeStamp = QQmlProperty::read(timeLine, "x").toInt() / 10;
+
+//    qDebug()<<"mouseMoving"<<timeStamp;
+	this->map->setTimeStamp(timeStamp);
+	
+	if (event->isAccepted()) return;
 
 
     this->map->mouseMoveEvent(event);
@@ -126,7 +135,7 @@ void NcQuickView::keyPressEvent(QKeyEvent *event)
     QQuickView::keyPressEvent(event);
     if (event->isAccepted()) return;
 	QObject *obj = this->rootObject();
-	QObject *timeLine = obj->findChild<QObject*>("ball");
+	QObject *timeLine = obj->findChild<QObject*>("slideBar");
 	
     switch(event->key()){
          default:

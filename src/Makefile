@@ -671,6 +671,10 @@ moc_NcQuickView.cpp: ../../../../Qt/5.7/clang_64/lib/QtOpenGL.framework/Headers/
 		../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/qrect.h \
 		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/QQuickView \
 		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/qquickview.h \
+		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/QGuiApplication \
+		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/qguiapplication.h \
+		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/QQuickItem \
+		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/qquickitem.h \
 		NcMapView.hpp \
 		Camera.hpp \
 		../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/QLineF \
@@ -744,6 +748,10 @@ main.o: main.cpp ../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/QDebug
 		../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/qrect.h \
 		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/QQuickView \
 		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/qquickview.h \
+		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/QGuiApplication \
+		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/qguiapplication.h \
+		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/QQuickItem \
+		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/qquickitem.h \
 		NcMapView.hpp \
 		Camera.hpp \
 		../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/QLineF \
@@ -794,6 +802,10 @@ NcRenderingLayer.o: NcRenderingLayer.cpp NcRenderingLayer.hpp \
 		../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/qrect.h \
 		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/QQuickView \
 		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/qquickview.h \
+		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/QGuiApplication \
+		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/qguiapplication.h \
+		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/QQuickItem \
+		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/qquickitem.h \
 		NcMapView.hpp \
 		Camera.hpp \
 		../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/QLineF \
@@ -913,6 +925,10 @@ CameraInteractor.o: CameraInteractor.cpp ../../../../Qt/5.7/clang_64/lib/QtGui.f
 		../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/qrect.h \
 		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/QQuickView \
 		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/qquickview.h \
+		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/QGuiApplication \
+		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/qguiapplication.h \
+		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/QQuickItem \
+		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/qquickitem.h \
 		NcMapView.hpp \
 		Camera.hpp \
 		../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/QLineF \
@@ -978,6 +994,10 @@ NcQuickView.o: NcQuickView.cpp NcQuickView.hpp \
 		../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/qrect.h \
 		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/QQuickView \
 		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/qquickview.h \
+		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/QGuiApplication \
+		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/qguiapplication.h \
+		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/QQuickItem \
+		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/qquickitem.h \
 		NcMapView.hpp \
 		Camera.hpp \
 		../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/QLineF \
@@ -1057,6 +1077,10 @@ NcMapView.o: NcMapView.cpp NcMapView.hpp \
 		../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/qvector.h \
 		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/QQuickView \
 		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/qquickview.h \
+		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/QGuiApplication \
+		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/qguiapplication.h \
+		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/QQuickItem \
+		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/qquickitem.h \
 		../../../../Qt/5.7/clang_64/lib/QtQml.framework/Headers/QQmlProperty \
 		../../../../Qt/5.7/clang_64/lib/QtQml.framework/Headers/qqmlproperty.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o NcMapView.o NcMapView.cpp
@@ -1072,6 +1096,10 @@ NcGui.o: NcGui.cpp NcGui.hpp \
 		../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/qrect.h \
 		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/QQuickView \
 		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/qquickview.h \
+		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/QGuiApplication \
+		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/qguiapplication.h \
+		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/QQuickItem \
+		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers/qquickitem.h \
 		NcMapView.hpp \
 		Camera.hpp \
 		../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/QLineF \

@@ -37,7 +37,7 @@ void SimpleCamera::pan(const QPointF &anchor, const QPointF &screenDiff)
 
 void SimpleCamera::zoom(const QPointF &a, double diff)
 {
-    diff = 0.01*diff;
+    diff = -0.01*diff;
 	double oldZoom = this->zoomLevel;
 	this->zoomLevel = this->zoomLevel - diff;
 	this->zoomLevel = this->zoomLevel>0.1? this->zoomLevel:0.1;

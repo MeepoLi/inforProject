@@ -1,6 +1,5 @@
 #ifndef NCVIEWGUI_H
 #define NCVIEWGUI_H
-
 #include "basegui.hpp"
 #include "NcQuickView.hpp"
 //#include "ChartView.hpp"

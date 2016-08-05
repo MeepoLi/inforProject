@@ -27,6 +27,7 @@ public:
     void keyPressEvent(QKeyEvent *event);
     void updateView();
     void setupViewport(int width, int height);
+	void setTimeStamp(int t);
     SimpleCamera *cam();
     const QPointF &getOrigin();
     const QRectF &getGeoBounds();

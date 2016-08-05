@@ -97,6 +97,15 @@ SimpleCamera *NcMapView::cam()
 {
     return this->cams;
 }
+void NcMapView::setTimeStamp(int t)
+{
+	if (t!=this->currentTimestep)
+	{
+		this->currentTimestep = t;
+		this->updateData();
+		this->updateView();
+	}
+}
 const int NcMapView::getTimestamp()
 {
 	return this->currentTimestep;
