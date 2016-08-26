@@ -1,6 +1,6 @@
 TEMPLATE = app
 
-QT += gui qml quick widgets opengl core quickwidgets
+QT += gui qml quick widgets opengl core charts 
 
 TARGET = Climate
 CONFIG += console
@@ -63,9 +63,8 @@ HEADERS += \
 include(deployment.pri)
 
 RESOURCES += \
-    NcView.qrc \
-    NcGui.qrc
-
+	NcGui.qrc\
+	NcView.qrc
 DISTFILES += \
     deployment.pri \
     html/index.html

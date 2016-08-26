@@ -2,7 +2,7 @@
 #define NCVIEWGUI_H
 #include "basegui.hpp"
 #include "NcQuickView.hpp"
-//#include "ChartView.hpp"
+#include "QtCharts"
 
 class NcGui : public BaseGui
 {
@@ -12,12 +12,12 @@ public:
 
     void run();
     void connectSlots();
+
 private:
     // main window
     NcQuickView *view;
     // chart window
 //    ChartView* dlg;
-
     // parameters
     bool fullscreen;
     float viewport[4];

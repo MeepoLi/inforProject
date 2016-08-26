@@ -19,6 +19,8 @@ NcRenderingLayer::~NcRenderingLayer()
 void NcRenderingLayer::init(NcMapView *view)
 {
     // shaders
+QSurfaceFormat glf = QSurfaceFormat::defaultFormat();
+	qDebug()<<"Glversion ="<<glf.version();
     this->shader = new QOpenGLShaderProgram();
     this->shader->addShaderFromSourceFile(QOpenGLShader::Vertex, ":shaders/simple.vert");
     this->shader->addShaderFromSourceFile(QOpenGLShader::Fragment, ":shaders/color.frag");
@@ -85,7 +87,7 @@ void NcRenderingLayer::init(NcMapView *view)
 
 void NcRenderingLayer::render(NcMapView *view)
 {
-    this->shader->bind();
+     this->shader->bind();
 //    qDebug() << view->cam()->getModelViewProjectionMatrix();
 
 //    view->cam()->glTransform(WORLD_ZOOM_LEVEL, view->getWBounds().center());

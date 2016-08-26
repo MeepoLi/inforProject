@@ -12,10 +12,10 @@ MAKEFILE      = Makefile
 
 CC            = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
 CXX           = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
-DEFINES       = -DQT_NO_DEBUG -DQT_QUICKWIDGETS_LIB -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
-CFLAGS        = -pipe -O2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.8 -Wall -W -fPIC $(DEFINES)
-CXXFLAGS      = -pipe -stdlib=libc++ -I/usr/local/opt/qt5/include -stdlib=libc++ -std=c++11 -Wno-c++11-narrowing -O2 -std=gnu++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.8 -Wall -W -fPIC $(DEFINES)
-INCPATH       = -I. -I-I -I. -I-I -isystem /usr/local/include -I../../../../Qt/5.7/clang_64/lib/QtQuickWidgets.framework/Headers -I../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers -I../../../../Qt/5.7/clang_64/lib/QtOpenGL.framework/Headers -I../../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers -I../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers -I../../../../Qt/5.7/clang_64/lib/QtQml.framework/Headers -I../../../../Qt/5.7/clang_64/lib/QtNetwork.framework/Headers -I../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AGL.framework/Headers -I../../../../Qt/5.7/clang_64/mkspecs/macx-clang -F/Users/L/Qt/5.7/clang_64/lib
+DEFINES       = -DQT_NO_DEBUG -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_CHARTS_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
+CFLAGS        = -pipe -O2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -mmacosx-version-min=10.8 -Wall -W -fPIC $(DEFINES)
+CXXFLAGS      = -pipe -stdlib=libc++ -I/usr/local/opt/qt5/include -stdlib=libc++ -std=c++11 -Wno-c++11-narrowing -O2 -std=gnu++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -mmacosx-version-min=10.8 -Wall -W -fPIC $(DEFINES)
+INCPATH       = -I. -I-I -I. -I-I -isystem /usr/local/include -I../../../../Qt/5.7/clang_64/lib/QtQuick.framework/Headers -I../../../../Qt/5.7/clang_64/lib/QtOpenGL.framework/Headers -I../../../../Qt/5.7/clang_64/lib/QtCharts.framework/Headers -I../../../../Qt/5.7/clang_64/lib/QtWidgets.framework/Headers -I../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers -I../../../../Qt/5.7/clang_64/lib/QtQml.framework/Headers -I../../../../Qt/5.7/clang_64/lib/QtNetwork.framework/Headers -I../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/AGL.framework/Headers -I../../../../Qt/5.7/clang_64/mkspecs/macx-clang -F/Users/L/Qt/5.7/clang_64/lib
 QMAKE         = /Users/L/Qt/5.7/clang_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -35,8 +35,8 @@ COMPRESS      = gzip -9f
 DISTNAME      = Climate1.0.0
 DISTDIR = /Users/L/Desktop/inforproj/discharge/src/.tmp/Climate1.0.0
 LINK          = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
-LFLAGS        = -headerpad_max_install_names -stdlib=libc++ -I/usr/local/opt/qt5/include -stdlib=libc++ -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.8 -Wl,-rpath,/Users/L/Qt/5.7/clang_64/lib
-LIBS          = $(SUBLIBS) -F/Users/L/Qt/5.7/clang_64/lib -L/usr/local/lib/ -lGLEW -lnetcdf_c++4 -framework QtQuickWidgets -framework QtQuick -framework QtQml -framework QtNetwork -framework QtCore -framework DiskArbitration -framework IOKit -framework QtGui -framework QtWidgets -framework QtOpenGL -framework OpenGL -framework AGL 
+LFLAGS        = -headerpad_max_install_names -stdlib=libc++ -I/usr/local/opt/qt5/include -stdlib=libc++ -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -mmacosx-version-min=10.8 -Wl,-rpath,/Users/L/Qt/5.7/clang_64/lib
+LIBS          = $(SUBLIBS) -F/Users/L/Qt/5.7/clang_64/lib -L/usr/local/lib/ -lGLEW -lnetcdf_c++4 -framework QtQuick -framework QtQml -framework QtNetwork -framework QtCore -framework DiskArbitration -framework IOKit -framework QtGui -framework QtOpenGL -framework QtWidgets -framework QtCharts -framework OpenGL -framework AGL 
 AR            = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar cq
 RANLIB        = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib -s
 SED           = sed
@@ -59,8 +59,8 @@ SOURCES       = main.cpp \
 		SimpleCamera.cpp \
 		NcQuickView.cpp \
 		NcMapView.cpp \
-		NcGui.cpp qrc_NcView.cpp \
-		qrc_NcGui.cpp \
+		NcGui.cpp qrc_NcGui.cpp \
+		qrc_NcView.cpp \
 		moc_NcQuickView.cpp
 OBJECTS       = main.o \
 		NcRenderingLayer.o \
@@ -74,8 +74,8 @@ OBJECTS       = main.o \
 		NcQuickView.o \
 		NcMapView.o \
 		NcGui.o \
-		qrc_NcView.o \
 		qrc_NcGui.o \
+		qrc_NcView.o \
 		moc_NcQuickView.o
 DIST          = deployment.pri \
 		html/index.html \
@@ -112,6 +112,8 @@ DIST          = deployment.pri \
 		../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_bluetooth.pri \
 		../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
 		../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
+		../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_charts.pri \
+		../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_charts_private.pri \
 		../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_clucene_private.pri \
 		../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_concurrent.pri \
 		../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_concurrent_private.pri \
@@ -303,6 +305,8 @@ Makefile: Climate.pro ../../../../Qt/5.7/clang_64/mkspecs/macx-clang/qmake.conf 
 		../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_bluetooth.pri \
 		../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
 		../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
+		../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_charts.pri \
+		../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_charts_private.pri \
 		../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_clucene_private.pri \
 		../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_concurrent.pri \
 		../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_concurrent_private.pri \
@@ -426,11 +430,11 @@ Makefile: Climate.pro ../../../../Qt/5.7/clang_64/mkspecs/macx-clang/qmake.conf 
 		../../../../Qt/5.7/clang_64/mkspecs/features/yacc.prf \
 		../../../../Qt/5.7/clang_64/mkspecs/features/lex.prf \
 		Climate.pro \
-		NcView.qrc \
 		NcGui.qrc \
-		../../../../Qt/5.7/clang_64/lib/QtQuickWidgets.framework/QtQuickWidgets.prl \
+		NcView.qrc \
 		../../../../Qt/5.7/clang_64/lib/QtQuick.framework/QtQuick.prl \
 		../../../../Qt/5.7/clang_64/lib/QtOpenGL.framework/QtOpenGL.prl \
+		../../../../Qt/5.7/clang_64/lib/QtCharts.framework/QtCharts.prl \
 		../../../../Qt/5.7/clang_64/lib/QtWidgets.framework/QtWidgets.prl \
 		../../../../Qt/5.7/clang_64/lib/QtGui.framework/QtGui.prl \
 		../../../../Qt/5.7/clang_64/lib/QtQml.framework/QtQml.prl \
@@ -470,6 +474,8 @@ Makefile: Climate.pro ../../../../Qt/5.7/clang_64/mkspecs/macx-clang/qmake.conf 
 ../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_bluetooth.pri:
 ../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_bluetooth_private.pri:
 ../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_bootstrap_private.pri:
+../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_charts.pri:
+../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_charts_private.pri:
 ../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_clucene_private.pri:
 ../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_concurrent.pri:
 ../../../../Qt/5.7/clang_64/mkspecs/modules/qt_lib_concurrent_private.pri:
@@ -593,11 +599,11 @@ deployment.pri:
 ../../../../Qt/5.7/clang_64/mkspecs/features/yacc.prf:
 ../../../../Qt/5.7/clang_64/mkspecs/features/lex.prf:
 Climate.pro:
-NcView.qrc:
 NcGui.qrc:
-../../../../Qt/5.7/clang_64/lib/QtQuickWidgets.framework/QtQuickWidgets.prl:
+NcView.qrc:
 ../../../../Qt/5.7/clang_64/lib/QtQuick.framework/QtQuick.prl:
 ../../../../Qt/5.7/clang_64/lib/QtOpenGL.framework/QtOpenGL.prl:
+../../../../Qt/5.7/clang_64/lib/QtCharts.framework/QtCharts.prl:
 ../../../../Qt/5.7/clang_64/lib/QtWidgets.framework/QtWidgets.prl:
 ../../../../Qt/5.7/clang_64/lib/QtGui.framework/QtGui.prl:
 ../../../../Qt/5.7/clang_64/lib/QtQml.framework/QtQml.prl:
@@ -617,7 +623,7 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents NcView.qrc NcGui.qrc $(DISTDIR)/
+	$(COPY_FILE) --parents NcGui.qrc NcView.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents NcRenderingLayer.hpp NcLoader.hpp QMatrix4x4D.hpp QVector3DD.hpp Camera.hpp BaseGui.hpp CameraInteractor.hpp BaseGui.hpp OpenGLFuncs.hpp SimpleCamera.hpp NcMapView.hpp NcQuickView.hpp NcGui.hpp basegui.hpp $(DISTDIR)/
 	$(COPY_FILE) --parents main.cpp NcRenderingLayer.cpp NcLoader.cpp QMatrix4x4D.cpp QVector3DD.cpp Camera.cpp CameraInteractor.cpp OpenGLFuncs.cpp SimpleCamera.cpp NcQuickView.cpp NcMapView.cpp NcGui.cpp $(DISTDIR)/
 
@@ -643,15 +649,9 @@ check: first
 
 benchmark: first
 
-compiler_rcc_make_all: qrc_NcView.cpp qrc_NcGui.cpp
+compiler_rcc_make_all: qrc_NcGui.cpp qrc_NcView.cpp
 compiler_rcc_clean:
-	-$(DEL_FILE) qrc_NcView.cpp qrc_NcGui.cpp
-qrc_NcView.cpp: NcView.qrc \
-		../../../../Qt/5.7/clang_64/bin/rcc \
-		shaders/simple.vert \
-		shaders/color.frag
-	/Users/L/Qt/5.7/clang_64/bin/rcc -name NcView NcView.qrc -o qrc_NcView.cpp
-
+	-$(DEL_FILE) qrc_NcGui.cpp qrc_NcView.cpp
 qrc_NcGui.cpp: NcGui.qrc \
 		../../../../Qt/5.7/clang_64/bin/rcc \
 		qml/QChart.qml \
@@ -659,6 +659,12 @@ qrc_NcGui.cpp: NcGui.qrc \
 		qml/QChartGallery.js \
 		qml/QChart.js
 	/Users/L/Qt/5.7/clang_64/bin/rcc -name NcGui NcGui.qrc -o qrc_NcGui.cpp
+
+qrc_NcView.cpp: NcView.qrc \
+		../../../../Qt/5.7/clang_64/bin/rcc \
+		shaders/simple.vert \
+		shaders/color.frag
+	/Users/L/Qt/5.7/clang_64/bin/rcc -name NcView NcView.qrc -o qrc_NcView.cpp
 
 compiler_moc_header_make_all: moc_NcQuickView.cpp
 compiler_moc_header_clean:
@@ -711,7 +717,7 @@ moc_NcQuickView.cpp: ../../../../Qt/5.7/clang_64/lib/QtOpenGL.framework/Headers/
 		../../../../Qt/5.7/clang_64/lib/QtQml.framework/Headers/qqmlproperty.h \
 		NcQuickView.hpp \
 		../../../../Qt/5.7/clang_64/bin/moc
-	/Users/L/Qt/5.7/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/L/Qt/5.7/clang_64/mkspecs/macx-clang -I/Users/L/Desktop/inforproj/discharge/src -I/Users/L/Desktop/inforproj/discharge/src/-I -I/Users/L/Desktop/inforproj/discharge/src -I/Users/L/Desktop/inforproj/discharge/src/-I -I/usr/local/include -I/Users/L/Qt/5.7/clang_64/lib/QtQuickWidgets.framework/Headers -I/Users/L/Qt/5.7/clang_64/lib/QtQuick.framework/Headers -I/Users/L/Qt/5.7/clang_64/lib/QtOpenGL.framework/Headers -I/Users/L/Qt/5.7/clang_64/lib/QtWidgets.framework/Headers -I/Users/L/Qt/5.7/clang_64/lib/QtGui.framework/Headers -I/Users/L/Qt/5.7/clang_64/lib/QtQml.framework/Headers -I/Users/L/Qt/5.7/clang_64/lib/QtNetwork.framework/Headers -I/Users/L/Qt/5.7/clang_64/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1 -I/usr/local/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/usr/include -I'/System/Library/Frameworks (framework directory)' -I'/Library/Frameworks (framework directory)' -F/Users/L/Qt/5.7/clang_64/lib NcQuickView.hpp -o moc_NcQuickView.cpp
+	/Users/L/Qt/5.7/clang_64/bin/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -I/Users/L/Qt/5.7/clang_64/mkspecs/macx-clang -I/Users/L/Desktop/inforproj/discharge/src -I/Users/L/Desktop/inforproj/discharge/src/-I -I/Users/L/Desktop/inforproj/discharge/src -I/Users/L/Desktop/inforproj/discharge/src/-I -I/usr/local/include -I/Users/L/Qt/5.7/clang_64/lib/QtQuick.framework/Headers -I/Users/L/Qt/5.7/clang_64/lib/QtOpenGL.framework/Headers -I/Users/L/Qt/5.7/clang_64/lib/QtCharts.framework/Headers -I/Users/L/Qt/5.7/clang_64/lib/QtWidgets.framework/Headers -I/Users/L/Qt/5.7/clang_64/lib/QtGui.framework/Headers -I/Users/L/Qt/5.7/clang_64/lib/QtQml.framework/Headers -I/Users/L/Qt/5.7/clang_64/lib/QtNetwork.framework/Headers -I/Users/L/Qt/5.7/clang_64/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/c++/v1 -I/usr/local/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/usr/include -I'/System/Library/Frameworks (framework directory)' -I'/Library/Frameworks (framework directory)' -F/Users/L/Qt/5.7/clang_64/lib NcQuickView.hpp -o moc_NcQuickView.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -1135,11 +1141,11 @@ NcGui.o: NcGui.cpp NcGui.hpp \
 		../../../../Qt/5.7/clang_64/lib/QtQml.framework/Headers/qqmlproperty.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o NcGui.o NcGui.cpp
 
-qrc_NcView.o: qrc_NcView.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_NcView.o qrc_NcView.cpp
-
 qrc_NcGui.o: qrc_NcGui.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_NcGui.o qrc_NcGui.cpp
+
+qrc_NcView.o: qrc_NcView.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_NcView.o qrc_NcView.cpp
 
 moc_NcQuickView.o: moc_NcQuickView.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_NcQuickView.o moc_NcQuickView.cpp

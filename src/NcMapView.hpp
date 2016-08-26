@@ -28,11 +28,13 @@ public:
     void updateView();
     void setupViewport(int width, int height);
 	void setTimeStamp(int t);
-    SimpleCamera *cam();
+	SimpleCamera *cam();
     const QPointF &getOrigin();
     const QRectF &getGeoBounds();
-	const int getTimestamp();
-    int getWidth();
+	int getTimestamp();
+    int getTimelength();
+	std::vector<float> getAreaSum();
+	int getWidth();
     int getHeight();
     void updateData();
     const std::vector<float>& getData();

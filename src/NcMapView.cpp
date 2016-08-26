@@ -6,25 +6,26 @@ NcMapView::NcMapView(const QString &filename, const QRectF &vp, QWidget *parent)
     this->ncLoader = new NcLoader();
     this->ncLoader->loadNCFile(filename);
     this->ncLoader->printInfo();
-
+	this->currentTimestep = 0;
     this->ncRenderingLayer = new NcRenderingLayer();
     this->zoomFactor = 1.0f;
     this->cams = new SimpleCamera(vp, this->window()->devicePixelRatio(), QPointF(0,0));
 //	this->cams->setWorldCenter(QPointF(0.5,0.5));
-//    this->cams->loadFromFile("../../datasets/camera.txt");
-//    this->cams->setCenter(QPointF(40.712508,-73.999128));
+//   this->cams->loadFromFile("../../datasets/camera.txt");
+//   this->cams->setCenter(QPointF(40.712508,-73.999128));
     this->interactor = new CameraInteractor(this, this->cams);
-//    this->origin = this->cam()->geo2world(this->geoBounds.topLeft());
-
+//   this->origin = this->cam()->geo2world(this->geoBounds.topLeft());
+	this->setBaseSize(800,600);
 }
 
 void NcMapView::initializeGL() {
-    this->currentTimestep = 0;
-    this->updateData();
+//	qDebug()<<"initialGL------MAP VIEW";
+   // this->updateData();
+
 }
 
 void NcMapView::resizeGL(int width, int height) {
-    this->setupViewport(width, height);
+  this->setupViewport(width, height);
 }
 
 void NcMapView::keyPressEvent(QKeyEvent *event) {
@@ -103,10 +104,11 @@ void NcMapView::setTimeStamp(int t)
 	{
 		this->currentTimestep = t;
 		this->updateData();
+
 		this->updateView();
 	}
 }
-const int NcMapView::getTimestamp()
+int NcMapView::getTimestamp()
 {
 	return this->currentTimestep;
 }
@@ -134,19 +136,50 @@ int NcMapView::getHeight()
 {
     return this->dataHeight;
 }
-
+int NcMapView::getTimelength()
+{
+	return this->ncLoader->getSize("time");
+}
+std::vector<float> NcMapView::getAreaSum()
+{
+	int timeSize = this->ncLoader->getSize("time");
+	std::vector<float> areaSum;
+    int lats = this->ncLoader->getSize("latitude");
+    int lons = this->ncLoader->getSize("longitude");
+	std::vector<float> data = std::vector<float>();
+	for (int t = 0; t<timeSize;t++){
+		this->ncLoader->getDataFromNC("discharge", {t, 0, 0}, {1, lats, lons}, data);
+		float sum = 0;
+		for (int i=0;i<data.size();i++)
+			if (data[i] != -9999)
+				sum+=data[i];
+		areaSum.push_back(sum);
+ 		
+	}
+	return areaSum;
+//	return this->areaSum;
+}
 void NcMapView::updateData()
 {
+
     data = std::vector<float>();
     std::vector<float> latBounds = std::vector<float>();
     std::vector<float> lonBounds = std::vector<float>();
 
+	std::vector<float> test = std::vector<float>();
+
+
     int lats = this->ncLoader->getSize("latitude");
     int lons = this->ncLoader->getSize("longitude");
-    this->ncLoader->getDataFromNC("discharge", {this->currentTimestep, 0, 0}, {1, lats, lons}, data);
+//	this->ncLoader->getDataFromNC("discharge", {this->currentTimestep, 0, 0}, {1, lats, lons}, data);
+	this->ncLoader->getDataFromNC("discharge", {this->currentTimestep, 0, 0}, {1, lats, lons}, data);
+ 	qDebug()<<"lats ="<< lats<<", lons="<<lons;
+    
     this->ncLoader->getDataFromNC("latitude", {0}, {lats}, latBounds);
     this->ncLoader->getDataFromNC("longitude", {0}, {lons}, lonBounds);
 
+	this->ncLoader->getDataFromNC("average",{this->currentTimestep}, {5}, test);
+	qDebug()<<"average ="<<test[0];
     // data
     this->dataWidth = lons;
     this->dataHeight = lats;
@@ -161,10 +194,13 @@ void NcMapView::updateData()
             data[i] = -1;
         else
             data[i] = (data[i] - min) / (max-min);
+
+//		areaSum+=data[i];
+//	qDebug()<<"i = "<<i<<" value = "<<data[i];
+	
     }
-
     qDebug() << qSetRealNumberPrecision(10) << max << min;
-
+    		
     qDebug() << "Current timestep" << this->currentTimestep;
 
     // geo bounds
@@ -181,7 +217,7 @@ void NcMapView::updateData()
 //    this->wBounds.setCoords(wBottomRight.x(), wTopLeft.y(), wTopLeft.x(), wBottomRight.y());
 //    qDebug() << "World bounds:" << qSetRealNumberPrecision(10) << this->wBounds.bottomLeft() << this->wBounds.bottomRight() << this->wBounds.topLeft() << this->wBounds.topRight();
 
-    this->ncRenderingLayer->init(this);
+	this->ncRenderingLayer->init(this);
 }
 
 const std::vector<float>& NcMapView::getData()

@@ -1,22 +1,26 @@
 import QtQuick 2.0
+import QtCharts 2.0
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.2
-//import jbQuick.Charts 1.0
 
 
 
 
 Rectangle {
 	id: root
-	width: 800; height:600
+	width: 0; height: 0
 
 	color: "#00FFFFFF"
 //	border.color: "#F00"
 //	border.width: 2
 	Rectangle {
+		id: timeBar
+		objectName: "timeBar"
 		height: 50; width: root.width
 		x:0
-		y:root.height-height
+		y:root.height-height-chart.height
+		property int n:100
+		property int offset: 20
 		color: "#AED6F1"
 
 		Text{
@@ -25,43 +29,53 @@ Rectangle {
 			color: "red"
 		}
 		Text{
-			text: Number(10)
-			x: root.width/8 * 1
+			text: Number(Math.round(timeBar.n*0.1))
+			x: (root.width - timeBar.offset)*0.1
 			color: "red"
 		}
 		Text{
-			text: Number(20)
-			x: root.width/8 * 2
+			text: Number(Math.round(timeBar.n*0.2))
+			x: (root.width -  timeBar.offset)*0.2
 			color: "red"
 		}
 		Text{
-			text: Number(30)
-			x: root.width/8 * 3
+			text: Number(Math.round(timeBar.n*0.3))
+			x: (root.width- timeBar.offset)*0.3
 			color: "red"
 		}
 		Text{
-			text: Number(40)
-			x: root.width/8 * 4
+			text: Number(Math.round(timeBar.n*0.4))
+			x: (root.width -  timeBar.offset)*0.4
 			color: "red"
 		}
 		Text{
-			text: Number(50)
-			x: root.width/8 * 5
+			text: Number(Math.round(timeBar.n*0.5))
+			x: (root.width -  timeBar.offset)*0.5
 			color: "red"
 		}
 		Text{
-			text: Number(60)
-			x: root.width/8 * 6
+			text: Number(Math.round(timeBar.n*0.6))
+			x: (root.width -  timeBar.offset)*0.6
 			color: "red"
 		}
 		Text{
-			text: Number(70)
-			x: root.width/8 * 7
+			text: Number(Math.round(timeBar.n*0.7))
+			x: (root.width -  timeBar.offset)*0.7
 			color: "red"
 		}
 		Text{
-			text: Number(80)
-			x: root.width
+			text: Number(Math.round(timeBar.n*0.8))
+			x: (root.width - timeBar.offset) * 0.8
+			color: "red"
+		}
+		Text{
+			text: Number(Math.round(timeBar.n*0.9))
+			x: (root.width - timeBar.offset) * 0.9
+			color: "red"
+		}
+		Text{
+			text: Number(Math.round(timeBar.n))
+			x: (root.width - timeBar.offset)
 			color: "red"
 		}
 
@@ -72,6 +86,7 @@ Rectangle {
 		objectName: "slideBar"
 		height: 50; width: 20
 		property int currentX : 0
+		property int timeStamp : currentX / 800 * timeBar.n
 		x: currentX / 800 * root.width
 //		y: root.height - height
 
@@ -113,4 +128,17 @@ Rectangle {
 
 		}
 	}
+
+
+	ChartView{
+		id: chart
+		title: "chart"
+		objectName: "chart"
+		width: root.width
+		height: 0
+		x:0
+		y:root.height - height
+	}
+
+
 }
