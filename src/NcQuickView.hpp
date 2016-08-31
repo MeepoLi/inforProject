@@ -33,6 +33,7 @@ public:
     void mousePressEvent(QMouseEvent *event);
     void mouseReleaseEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
+	void keyReleaseEvent(QKeyEvent *event);
     void mouseDoubleClickEvent(QMouseEvent *event);
     void keyPressEvent(QKeyEvent *event);
 //	void setChartView(QtCharts::QChartView chartview);

@@ -7,6 +7,7 @@ uniform sampler2D tex;
 
 void main()
 {
+//	fragColor = vec4(1,0,0,1);
     float value = texture( tex, uv.xy).r;
 
     if(value > 0.0001)

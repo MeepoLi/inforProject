@@ -11,6 +11,7 @@
 CameraInteractor::CameraInteractor(NcMapView *mv, SimpleCamera *cam) :
     view(mv), baseCamera(cam), action(-1)
 {
+	this->rectangle_flag = false;
 }
 
 CameraInteractor::~CameraInteractor()
@@ -23,6 +24,23 @@ void CameraInteractor::setCamera(SimpleCamera *cam)
     this->baseCamera = cam;
 }
 
+void CameraInteractor::setRectangle(std::vector<float> *rectangle[3])
+{
+	for (int i = 0; i < 3; i++)
+		this->rect[i] = rectangle[i];	
+}
+
+void CameraInteractor::keyReleaseEvent(QKeyEvent *event)
+{
+	switch (event->key())
+	{
+		case Qt::Key_Shift:
+			this->rectangle_flag = false;
+//			qDebug()<<"KeyRealse";
+			break;
+	}
+
+}
 void CameraInteractor::keyPressEvent(QKeyEvent *event)
 {
     // double dist = exp2((double)(8-this->camera->getZoomLevel()));
@@ -32,13 +50,25 @@ void CameraInteractor::keyPressEvent(QKeyEvent *event)
     // case Qt::Key_Left:
     // case Qt::Key_Right:
     // case Qt::Key_Up:
-     case Qt::Key_A:
-			qDebug()<< "zoom";
-			this->baseCamera->zoom(this->mousePos, 5);  
-			break;
-	 case Qt::Key_S:
-	 	
-			this->baseCamera->zoom(this->mousePos, -5);  
+		case Qt::Key_1:
+				this->rectangle_idx = 0;
+				break;
+		case Qt::Key_2:
+				this->rectangle_idx = 1;
+				break;
+		case Qt::Key_3:
+				this->rectangle_idx = 2;
+				break;
+		case Qt::Key_Shift:{	
+				this->rectangle_flag = true;
+				QPointF pos = this->baseCamera->getworldCoordinate(this->lastPos);
+				(*this->rect[this->rectangle_idx])[0] = (*this->rect[this->rectangle_idx])[2] = pos.x();
+				(*this->rect[this->rectangle_idx])[1] = (*this->rect[this->rectangle_idx])[3] = pos.y();
+		//		qDebug()<<"set Cood";
+				break;
+				}
+		
+	 case Qt::Key_S:	
 			break;
 	//   if (key==Qt::Key_Down) dlat = -dist;
 
@@ -106,8 +136,16 @@ void CameraInteractor::mouseReleaseEvent(QMouseEvent *event)
 
 void CameraInteractor::mouseMoveEvent(QMouseEvent *event)
 {
-    QPointF diff = (event->pos()-this->lastPos);///this->baseCamera->getZoomFactor();
-
+    QPointF diff = (event->pos()-this->lastPos);
+	
+	this->lastPos = event->pos();
+	if (this->rectangle_flag)
+	{
+		QPointF pos = this->baseCamera->getworldCoordinate(event->pos());
+		(*this->rect[this->rectangle_idx])[2] = pos.x();
+		(*this->rect[this->rectangle_idx])[3] = pos.y();
+//		qDebug()<<"setting idx = "<<this->rectangle_idx;
+	}
 //    qDebug()<< "mouse moving == "<<event->pos();
     // Pan
     if (this->action==0) {
@@ -119,7 +157,7 @@ void CameraInteractor::mouseMoveEvent(QMouseEvent *event)
 
     // Zoom
     else if (this->action==1) {
- //  		 qDebug() << "zoomMId = " << this->lastPos;
+   		 qDebug() << "zoomMId = " << this->mouseClickPos;
 		 this->baseCamera->zoom(this->mouseClickPos, diff.y() * 2.0);  
    }
 
@@ -137,11 +175,8 @@ void CameraInteractor::mouseMoveEvent(QMouseEvent *event)
     else if (this->action==4) {
 //        this->baseCamera->yaw(this->screenPos, diff.x());
 //        this->baseCamera->pitch(this->screenPos, diff.y());
-    } else {
-        return;
-    }
-	this->lastPos = event->pos();
-    this->view->updateView();
+    } 
+    //this->view->updateView();
 }
 
 void CameraInteractor::mouseDoubleClickEvent(QMouseEvent *event)

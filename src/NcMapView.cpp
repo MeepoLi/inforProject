@@ -14,6 +14,11 @@ NcMapView::NcMapView(const QString &filename, const QRectF &vp, QWidget *parent)
 //   this->cams->loadFromFile("../../datasets/camera.txt");
 //   this->cams->setCenter(QPointF(40.712508,-73.999128));
     this->interactor = new CameraInteractor(this, this->cams);
+	this->rectangle[0] = new std::vector<float>(4,0);
+	this->rectangle[1] = new std::vector<float>(4,0);
+	this->rectangle[2] = new std::vector<float>(4,0);
+
+	this->interactor->setRectangle(this->rectangle);
 //   this->origin = this->cam()->geo2world(this->geoBounds.topLeft());
 	this->setBaseSize(800,600);
 }
@@ -27,14 +32,16 @@ void NcMapView::initializeGL() {
 void NcMapView::resizeGL(int width, int height) {
   this->setupViewport(width, height);
 }
+void NcMapView::keyReleaseEvent(QKeyEvent *event) {
+	if (this->interactor)
+        this->interactor->keyReleaseEvent(event); 
+}
 
 void NcMapView::keyPressEvent(QKeyEvent *event) {
     if (this->interactor)
         this->interactor->keyPressEvent(event);
     event->accept();
-    int key = event->key();
-
-	
+    int key = event->key();	
 	switch (key) {
 	    case Qt::Key_Left:
     	    currentTimestep = std::max(0, currentTimestep-1);
@@ -46,6 +53,9 @@ void NcMapView::keyPressEvent(QKeyEvent *event) {
         	this->updateData();
         	this->updateView();
         	break;
+//		case Qt::Key_A:
+//			qDebug()<<(*this->rectangle)[0]<<","<<(*this->rectangle)[1]<<","<<(*this->rectangle)[2]<<","<<(*this->rectangle)[3];
+//			break;
     }
 }
 
@@ -56,6 +66,8 @@ void NcMapView::paintGL() {
     this->cam()->updateViewport();
 
     this->ncRenderingLayer->render(this);
+	for (int idx = 0; idx < 3; idx ++)
+		this->ncRenderingLayer->rectangle((*this->rectangle[idx])[0],(*this->rectangle[idx])[1],(*this->rectangle[idx])[2],(*this->rectangle[idx])[3], idx);
 }
 
 void NcMapView::mousePressEvent(QMouseEvent *event)
@@ -140,23 +152,79 @@ int NcMapView::getTimelength()
 {
 	return this->ncLoader->getSize("time");
 }
-std::vector<float> NcMapView::getAreaSum()
+std::vector< std::vector<float>> NcMapView::getAreaSum()
 {
-	int timeSize = this->ncLoader->getSize("time");
-	std::vector<float> areaSum;
-    int lats = this->ncLoader->getSize("latitude");
-    int lons = this->ncLoader->getSize("longitude");
-	std::vector<float> data = std::vector<float>();
-	for (int t = 0; t<timeSize;t++){
-		this->ncLoader->getDataFromNC("discharge", {t, 0, 0}, {1, lats, lons}, data);
-		float sum = 0;
-		for (int i=0;i<data.size();i++)
-			if (data[i] != -9999)
-				sum+=data[i];
-		areaSum.push_back(sum);
- 		
+	int lats = this->ncLoader->getSize("latitude");
+	int lons = this->ncLoader->getSize("longitude");
+	
+	if (this->mapData.size() == 0)
+	{
+		int timeSize = this->ncLoader->getSize("time");
+		std::vector<float> areaSum;
+			
+		std::vector<float> d = std::vector<float>();
+		for (int t = 0; t<timeSize;t++){
+			qDebug()<<"Get data of time: "<<t;
+			this->ncLoader->getDataFromNC("discharge", {t, 0, 0}, {1, lats, lons}, d);
+			this->mapData.push_back(d);
+		}	
+	}	
+	std::vector< std::vector<float>> retValue;
+	for (int idx = 0; idx < 3; idx++){
+		std::vector<float> areaSum;
+		int lati1,lati2,long1,long2;
+		if ((*this->rectangle[idx])[0]< (*this->rectangle[idx])[2])
+		{
+			long1 = ( (*this->rectangle[idx])[0] > 1 ? 1 :  (*this->rectangle[idx])[0] )  * lons;
+			long2 = ( (*this->rectangle[idx])[2] > 1 ? 1 :  (*this->rectangle[idx])[2] )  * lons;
+		} 
+		else
+		{
+			long2 = ( (*this->rectangle[idx])[0] > 1 ? 1 :  (*this->rectangle[idx])[0] )  * lons;
+			long1 = ( (*this->rectangle[idx])[2] > 1 ? 1 :  (*this->rectangle[idx])[2] )  * lons;
+		}
+// left top = 0,0
+ /*		if ((*this->rectangle[idx])[0]< (*this->rectangle[idx])[2])
+		{
+			lati2 = lats -  ( (*this->rectangle[idx])[0] > 1 ? 1 :  (*this->rectangle[idx])[0] )  * lats;
+			lati1 = lats - ( (*this->rectangle[idx])[2] > 1 ? 1 :  (*this->rectangle[idx])[2] )  * lats;
+		} 
+		else
+		{
+			lati1 = lats - ( (*this->rectangle[idx])[0] > 1 ? 1 :  (*this->rectangle[idx])[0] )  * lats;
+			lati2 = lats - ( (*this->rectangle[idx])[2] > 1 ? 1 :  (*this->rectangle[idx])[2] )  * lats;
+		} */
+	
+		if ((*this->rectangle[idx])[1]< (*this->rectangle[idx])[3])
+		{
+			lati1 = ( (*this->rectangle[idx])[1] > 1 ? 1 :  (*this->rectangle[idx])[1] )  * lats;
+			lati2 = ( (*this->rectangle[idx])[3] > 1 ? 1 :  (*this->rectangle[idx])[3] )  * lats;
+		} 
+		else
+		{
+			lati2 = ( (*this->rectangle[idx])[1] > 1 ? 1 :  (*this->rectangle[idx])[1] )  * lats;
+			lati1 = ( (*this->rectangle[idx])[3] > 1 ? 1 :  (*this->rectangle[idx])[3] )  * lats;
+		}
+	qDebug()<<"(lat = "<<lati1<<" lon = "<<long1<<")-> (lat = "<<lati2<<" lon ="<<long2<<")";
+			for (int t = 0; t<this->mapData.size();t++){
+				float sum = 0;
+				int start = lati1 * lons + long1;
+				int end   = lati2 * lons + long2;
+				start = start < 0 ? 0 : start;
+				start = start > this->mapData[t].size() - 1 ? this->mapData[t].size()-1 : start;
+
+				end = end < 0 ? 0 : end;
+				end = end > this->mapData[t].size() - 1 ? this->mapData[t].size()-1 : end;
+		//		qDebug()<<start<<"-->"<<end;
+
+				for (int i = start; i <= end ; i ++ )
+				if (this->mapData[t][i]!=-9999)
+					sum+=this->mapData[t][i];
+				areaSum.push_back(sum);
+		}
+	retValue.push_back(areaSum);
 	}
-	return areaSum;
+	return retValue;
 //	return this->areaSum;
 }
 void NcMapView::updateData()
@@ -186,7 +254,7 @@ void NcMapView::updateData()
     auto dataMinmax = std::minmax_element(data.begin(), data.end());
     float min = *dataMinmax.first;
     float max = *dataMinmax.second;
-
+	qDebug()<< data.size();
 //    max = 8460.657227;
     min = 0;
     for(int i=0; i<data.size(); ++i) {
@@ -217,6 +285,7 @@ void NcMapView::updateData()
 //    this->wBounds.setCoords(wBottomRight.x(), wTopLeft.y(), wTopLeft.x(), wBottomRight.y());
 //    qDebug() << "World bounds:" << qSetRealNumberPrecision(10) << this->wBounds.bottomLeft() << this->wBounds.bottomRight() << this->wBounds.topLeft() << this->wBounds.topRight();
 
+	
 	this->ncRenderingLayer->init(this);
 }
 

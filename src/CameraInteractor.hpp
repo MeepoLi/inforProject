@@ -19,9 +19,12 @@ public:
     CameraInteractor(NcMapView *mv, SimpleCamera *cam);
     SimpleCamera *getCamera() const;
     QPointF getLastPos();
-    void     setCamera(SimpleCamera *cam);
+    void    setCamera(SimpleCamera *cam);
+	void	setRectangle(std::vector<float> *rectangle[3]);
     virtual ~CameraInteractor();
     virtual void keyPressEvent(QKeyEvent *event);
+    virtual void keyReleaseEvent(QKeyEvent *event);
+
     virtual void mousePressEvent(QMouseEvent *event);
     virtual void mouseMoveEvent(QMouseEvent *event);
     virtual void mouseReleaseEvent(QMouseEvent *event);
@@ -37,7 +40,9 @@ protected:
     QPointF    screenPos;
 	QPointF	   mouseClickPos;
 	float      focusDistance;
-
+	std::vector<float> *rect[3];
+	int	rectangle_idx;
+	bool rectangle_flag;
 };
 
 inline SimpleCamera * CameraInteractor::getCamera() const

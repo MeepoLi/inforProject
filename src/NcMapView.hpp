@@ -25,6 +25,7 @@ public:
     void mouseMoveEvent(QMouseEvent *event);
     void mouseDoubleClickEvent(QMouseEvent *event);
     void keyPressEvent(QKeyEvent *event);
+	void keyReleaseEvent(QKeyEvent *event);
     void updateView();
     void setupViewport(int width, int height);
 	void setTimeStamp(int t);
@@ -33,7 +34,7 @@ public:
     const QRectF &getGeoBounds();
 	int getTimestamp();
     int getTimelength();
-	std::vector<float> getAreaSum();
+	std::vector< std::vector<float>> getAreaSum();
 	int getWidth();
     int getHeight();
     void updateData();
@@ -52,7 +53,9 @@ private:
     QRectF wBounds;
     QPointF origin;
     float zoomFactor;
+	std::vector< std::vector<float>> mapData;
     std::vector<float> data;
+	std::vector<float> *rectangle[3];
     int dataWidth;
     int dataHeight;
     int currentTimestep;

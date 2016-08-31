@@ -16,10 +16,25 @@ void SimpleCamera::setWorldCenter( const QPointF &center)
 	this->worldCenter = center;
 
 }
+QPointF SimpleCamera::getworldCoordinate(const QPointF mousePosition)
+{
+	double diff = 1 - this->zoomLevel;
+	QPointF translate =-this-> pos + (QPointF(0.5,0.5) + this->pos) * diff;
+    
+//	this->matModelView.translate(-this->pos.x() + (0.5 + this->pos.x()) * diff , -this->pos.y() + (0.5 + this->pos.y()) * diff,0);
+//    this->matModelView.translate(translate.x(), translate.y(), 0);
+	
 
+	QPointF mouse = this->screen2world(mousePosition);	
+
+	QPointF sol  = (-translate + mouse) / this->zoomLevel;//(mouse + this->pos) / diff - this->pos;
+	return sol;
+}
 void SimpleCamera::updateMousePosition(const QPointF mousePosition)
 {
 	this->mousePos = this->screen2world(mousePosition);
+
+
 	return;
 }
 void SimpleCamera::pan(const QPointF &anchor, const QPointF &screenDiff)
@@ -53,10 +68,10 @@ void SimpleCamera::zoom(const QPointF &a, double diff)
 
 }
 
-const QPointF SimpleCamera::screen2world(const QPointF &screen)
+const QPointF SimpleCamera::screen2world(const QPointF &screen)// screen(800,600)  to  screen (0 ,1)
 {
 	
-	return QPointF( screen.x()/this->screenViewport.width(), 1- screen.y()/this->screenViewport.height());
+	return QPointF( screen.x()/this->screenViewport.width(), 1 - screen.y()/this->screenViewport.height());
 }
 
 const QMatrix4x4D &SimpleCamera::getModelViewProjectionMatrix()
@@ -86,6 +101,7 @@ void SimpleCamera::update()
 	QPointF translate =-this-> pos + (QPointF(0.5,0.5)  + this->pos) * diff;
     
 //	this->matModelView.translate(-this->pos.x() + (0.5 + this->pos.x()) * diff , -this->pos.y() + (0.5 + this->pos.y()) * diff,0);
+   // qDebug()<< translate;
     this->matModelView.translate(translate.x(), translate.y(), 0);
 	this->matModelView.scale(this->zoomLevel);
 	

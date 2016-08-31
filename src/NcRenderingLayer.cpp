@@ -19,13 +19,17 @@ NcRenderingLayer::~NcRenderingLayer()
 void NcRenderingLayer::init(NcMapView *view)
 {
     // shaders
-QSurfaceFormat glf = QSurfaceFormat::defaultFormat();
+	QSurfaceFormat glf = QSurfaceFormat::defaultFormat();
 	qDebug()<<"Glversion ="<<glf.version();
     this->shader = new QOpenGLShaderProgram();
     this->shader->addShaderFromSourceFile(QOpenGLShader::Vertex, ":shaders/simple.vert");
     this->shader->addShaderFromSourceFile(QOpenGLShader::Fragment, ":shaders/color.frag");
     this->shader->link();
 
+	this->rect_shader =  new QOpenGLShaderProgram();
+    this->rect_shader->addShaderFromSourceFile(QOpenGLShader::Vertex, ":shaders/simple.vert");
+    this->rect_shader->addShaderFromSourceFile(QOpenGLShader::Fragment, ":shaders/rect_color.frag");
+    this->rect_shader->link();
     glGenVertexArrays(1, &this->vao);
     glGenBuffers(1, &this->vbo);
     glGenBuffers(1, &this->colorbuffer);
@@ -83,10 +87,77 @@ QSurfaceFormat glf = QSurfaceFormat::defaultFormat();
 
     // texture
     createTexImage2D(view->getWidth(), view->getHeight(), GL_R32F, GL_RED, GL_FLOAT, &this->tex, (void*)view->getData().data());
-}
 
+//	this->rectangle(0.2,0.2,0.5,0.5);
+}
+void NcRenderingLayer::rectangle(float x1, float y1, float x2, float y2, int idx)
+{
+
+	float rec_points[] = {
+		x1, y1, 0,
+		x1, y2, 0,
+		x1, y2, 0,
+		x2, y2, 0,
+		x2, y2, 0,
+		x2, y1, 0,
+		x2, y1, 0,
+		x1, y1, 0,
+		
+	};
+	float rec_color[] = {
+		1,1,0,
+		1,1,0,
+		1,1,0,
+		1,1,0,
+		1,1,0,
+		1,1,0,
+		1,1,0,
+		1,1,0
+	};
+	this->rectangle_flag = true;
+    glGenVertexArrays(1, &this->vao);
+	glGenBuffers(1, &rect_buffer[idx]);
+	glGenBuffers(1, &rect_color[idx]);
+
+	glBindBuffer(GL_ARRAY_BUFFER, this->rect_buffer[idx]);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(rec_points),rec_points, GL_STATIC_DRAW);
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	
+	glBindBuffer(GL_ARRAY_BUFFER, this->rect_color[idx]);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(rec_color), rec_color, GL_STATIC_DRAW);
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+
+
+//	qDebug()<<"draw rect";
+	
+}	
 void NcRenderingLayer::render(NcMapView *view)
 {
+
+
+	QMatrix4x4D mvp = view->cam()->getModelViewProjectionMatrix();
+	if (this->rectangle_flag){
+
+		this->rect_shader->bind();
+		glBindVertexArray( this->vao );
+		glEnableVertexAttribArray(0);
+    	glUniformMatrix4dv(rect_shader->uniformLocation("mvp"),1, GL_FALSE, (mvp).constData());
+		for (int idx=0; idx<3; idx ++){
+			glBindBuffer(GL_ARRAY_BUFFER, rect_buffer[idx]);
+			glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);	
+			glEnableVertexAttribArray(1);
+			glBindBuffer(GL_ARRAY_BUFFER, rect_color[idx]);
+			glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
+		    glUniform1i(this->rect_shader->uniformLocation("colorFlag"), idx);
+			glDrawArrays(GL_LINES, 0, 8);
+		}
+		glDisableVertexAttribArray(0);
+		glDisableVertexAttribArray(1);
+//    glUniform2d(shader->uniformLocation("size"), view->getWBounds().width(), view->getWBounds().height());
+		this->rect_shader->release();
+	}
+
      this->shader->bind();
 //    qDebug() << view->cam()->getModelViewProjectionMatrix();
 
@@ -94,7 +165,7 @@ void NcRenderingLayer::render(NcMapView *view)
 //    view->cam()->glTransform(WORLD_ZOOM_LEVEL, view->getWBounds().center(), QPointF(view->getWBounds().width(), view->getWBounds().height()));
 //    QMatrix4x4D proj = view->cam()->getProjectionMatrix();
 //    QMatrix4x4D mv = view->cam()->getModelViewMatrix();
-    QMatrix4x4D mvp = view->cam()->getModelViewProjectionMatrix();
+//	mvp.setToIdentity();
 //    mv.setToIdentity();
 //    mv.translate(-view->getOrigin().x(), -view->getOrigin().y(), 0);
 //    mv.translate(1,0.5,0);
@@ -130,14 +201,13 @@ void NcRenderingLayer::render(NcMapView *view)
 //    glUniform2d(shader->uniformLocation("size"), view->getWBounds().width(), view->getWBounds().height());
     glUniform1i(shader->uniformLocation("tex"), 0);
 
-//    qDebug() << qSetRealNumberPrecision(10) << view->getWBounds().width() << view->getWBounds().height();
 
     glActiveTexture(GL_TEXTURE0);
-
+//working code below
     glBindTexture(GL_TEXTURE_2D, this->tex);
 
-    glBindVertexArray( this->vao );
-    glEnableVertexAttribArray(0);
+	glBindVertexArray( this->vao );
+	glEnableVertexAttribArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, this->vbo);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
 
@@ -149,9 +219,12 @@ void NcRenderingLayer::render(NcMapView *view)
     glDisableVertexAttribArray(0);
     glDisableVertexAttribArray(1);
 
+
+
     glBindTexture(GL_TEXTURE_2D, 0);
 
 //    qDebug() << glGetError();
 
     this->shader->release();
+	
 }

@@ -662,6 +662,7 @@ qrc_NcGui.cpp: NcGui.qrc \
 
 qrc_NcView.cpp: NcView.qrc \
 		../../../../Qt/5.7/clang_64/bin/rcc \
+		shaders/rect_color.frag \
 		shaders/simple.vert \
 		shaders/color.frag
 	/Users/L/Qt/5.7/clang_64/bin/rcc -name NcView NcView.qrc -o qrc_NcView.cpp
@@ -788,7 +789,8 @@ main.o: main.cpp ../../../../Qt/5.7/clang_64/lib/QtCore.framework/Headers/QDebug
 		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/qopengltexture.h \
 		NcLoader.hpp \
 		../../../../Qt/5.7/clang_64/lib/QtQml.framework/Headers/QQmlProperty \
-		../../../../Qt/5.7/clang_64/lib/QtQml.framework/Headers/qqmlproperty.h
+		../../../../Qt/5.7/clang_64/lib/QtQml.framework/Headers/qqmlproperty.h \
+		QtCharts
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 NcRenderingLayer.o: NcRenderingLayer.cpp NcRenderingLayer.hpp \
@@ -1037,6 +1039,9 @@ NcQuickView.o: NcQuickView.cpp NcQuickView.hpp \
 		NcLoader.hpp \
 		../../../../Qt/5.7/clang_64/lib/QtQml.framework/Headers/QQmlProperty \
 		../../../../Qt/5.7/clang_64/lib/QtQml.framework/Headers/qqmlproperty.h \
+		NcGui.hpp \
+		basegui.hpp \
+		QtCharts \
 		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/QKeyEvent \
 		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/qevent.h \
 		../../../../Qt/5.7/clang_64/lib/QtQml.framework/Headers/QQmlContext \
@@ -1138,7 +1143,8 @@ NcGui.o: NcGui.cpp NcGui.hpp \
 		../../../../Qt/5.7/clang_64/lib/QtGui.framework/Headers/qopengltexture.h \
 		NcLoader.hpp \
 		../../../../Qt/5.7/clang_64/lib/QtQml.framework/Headers/QQmlProperty \
-		../../../../Qt/5.7/clang_64/lib/QtQml.framework/Headers/qqmlproperty.h
+		../../../../Qt/5.7/clang_64/lib/QtQml.framework/Headers/qqmlproperty.h \
+		QtCharts
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o NcGui.o NcGui.cpp
 
 qrc_NcGui.o: qrc_NcGui.cpp 

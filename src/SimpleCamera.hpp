@@ -26,6 +26,7 @@ public:
     void setNormalizedViewport(const QRectF &nvp);
     void setViewport(int width, int height, int dpr);
  	const QRectF &getNativeViewport() const;
+    QPointF getworldCoordinate(const QPointF mousePosition);
 public:	
 	CAMERA_MATRIX(Projection);
 	CAMERA_MATRIX(ModelView);

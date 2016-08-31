@@ -13,7 +13,7 @@ NcGui::NcGui(): fullscreen(false)
     QString filename = "../../datasets/Discharge_NCEP_Pristine_dTS2004.nc";
     this->view = new NcQuickView(filename, QRectF(viewport[0], viewport[1], viewport[2]-viewport[0], viewport[3]-viewport[1]));
 //    this->view->setGeometry(200,200,800,600);
-	this->view->setGeometry(0,0,800,600);
+	this->view->setGeometry(0,0,800,800);
 	
  // chart dialog
  //   this->dlg = new ChartView();

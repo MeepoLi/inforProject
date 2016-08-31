@@ -129,16 +129,97 @@ Rectangle {
 		}
 	}
 
-
+	
 	ChartView{
 		id: chart
 		title: "chart"
 		objectName: "chart"
 		width: root.width
-		height: 0
+		height: 300
 		x:0
 		y:root.height - height
+		property int maxX: 100
+		property int minY: 0
+		property int maxY: 100
+		property int count: 0
+
+		ValueAxis {
+			id: axisX
+			objectName: "axisX"
+			min: 0
+			max: chart.maxX
+		}
+		ValueAxis {
+			id: axisY
+			objectName: "axisY"
+			min: chart.minY
+			max: chart.maxY
+		}
+		LineSeries{
+			id: line1
+			axisX: axisX
+			axisY: axisY
+//			XYPoint{x:0; y:0 }
+//			XYPoint{x:3; y:10 }
+//			XYPoint{x:4;y:7}
+		}
+		LineSeries{
+			id: line2
+			axisX: axisX
+			axisY: axisY
+//			XYPoint{x:0; y:0 }
+//			XYPoint{x:3; y:10 }
+//			XYPoint{x:4;y:7}
+		}
+
+		LineSeries{
+			id: line3
+			axisX: axisX
+			axisY: axisY
+//			XYPoint{x:0; y:0 }
+//			XYPoint{x:3; y:10 }
+//			XYPoint{x:4;y:7}
+		}
+
+		function createXYPoint1(xValue, yValue)
+		{
+			line1.append(xValue, yValue);
+		}
+		function createXYPoint2(xValue, yValue)
+		{
+			line2.append(xValue, yValue);
+		}
+		function createXYPoint3(xValue, yValue)
+		{
+			line3.append(xValue, yValue);
+		}
+		
+		function clearLine()
+		{
+			line1.clear();
+			line2.clear();
+			line3.clear();
+		}
 	}
 
+/*	
+	function createXYPoint(xValue, yValue)
+	{
+		var component;
+		var xyp, xyp2;
+//		component = Qt.createComponent("xypoint.qml");
+//		if (component.status !=Component.Ready)
+//		{
+//			console.debug("not find qml");
+//		}
+//		xyp = component.createObject(line, {"x": xValue, "y": yValue})
+		xyp2 = Qt.createQmlObject('import QtQuick 2.0;import QtCharts 2.0; XYPoint{x:2;y:2} ', line );
+//		xyp2 = Qt.createQmlObject('import QtQuick 2.0; XYPoint { x:8; y:8 }', line );
+
+		xyp = Qt.createQmlObject('import QtQuick 2.0; Rectangle {color: "red"; width:20; height:20}',  root);
+		
+		return "succeed"
+	}
+*/
 
 }

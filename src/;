@@ -1,11 +1,13 @@
 #include "NcQuickView.hpp"
-#include "NcGui.hpp"
+
 #include <QKeyEvent>
 #include <QQmlContext>
 
 #include <algorithm>
 #include <iostream>
-//#include <QtCharts>
+#include <QtCharts>
+//#include <GL/glut.h>
+
 
 void NcQuickView::ensureOpenGLFormat()
 {
@@ -165,19 +167,6 @@ void NcQuickView::mouseReleaseEvent(QMouseEvent *event)
     NcQuickView::update();
 }
 
-//void NcQuickView::setChartView(QtCharts::QChartView chartview)
-//{
-//	this->qchartview = chartview;
-//}
-void NcQuickView::keyReleaseEvent(QKeyEvent *event)
-{
-	QQuickView::keyReleaseEvent(event);
-	if (event->isAccepted()) return;
-
-	this->map->keyReleaseEvent(event);
-	NcQuickView::update();
-
-}
 
 void NcQuickView::keyPressEvent(QKeyEvent *event)
 {
@@ -187,46 +176,26 @@ void NcQuickView::keyPressEvent(QKeyEvent *event)
 	QObject *timeLine = obj->findChild<QObject*>("slideBar");
 	
     switch(event->key()){
-		case Qt::Key_C:
-			{
-				break;
-			}
-		case Qt::Key_M:
+		case  Qt::Key_M:
 			{	
-				std::vector< std::vector<float> > areaSum = this->map->getAreaSum();
-				QObject *qchartView = obj->findChild<QObject*>("chart");
+			//	std::vector<float> areaSum = this->map->getAreaSum();
+				QtCharts::QChartView *qchart = qobject_cast<QtCharts::QChartView*>(obj);
+				//obj->findChild<QtCharts::QChartView*>("chart");
+//				if (!qchart) {
+//					qDebug()<<"qchart not found";
+//					return;
+//				}
+				QtCharts::QLineSeries* series = new QtCharts::QLineSeries();
+				//for (int i = 0; i < areaSum.size(); i++)
+				//	series->append(i, areaSum[i]);
+				qchart->chart()->createDefaultAxes();
+			    qchart->chart()->addSeries(series);
+//				if (!lineseries) {
+//					qDebug()<<"line not found";
+//					return;
+//				}
 			
-				QMetaObject::invokeMethod(qchartView, "clearLine");//, Q_RETURN_ARG(QVariant, retValue), Q_ARG(QVariant, i), Q_ARG(QVariant,areaSum[i]));I
-				qchartView->setProperty("maxX",(int) areaSum[0].size());
-
-				float maxY = INT_MIN, minY = INT_MAX;
-				for (int idx = 0; idx < 3; idx ++)
-					for (int i=0;i<areaSum[idx].size();i++)
-						{
-							maxY = maxY<areaSum[idx][i]?areaSum[idx][i]:maxY;
-							minY = minY>areaSum[idx][i]?areaSum[idx][i]:minY;
-						}
-				qDebug()<<minY<<" "<<maxY;
-				qchartView->setProperty("minY",(int)minY*0.9);
-				qchartView->setProperty("maxY",(int)maxY*1.1);
-				
-				for (int idx = 0 ; idx < 3 ; idx++)
-				{			
-	
-					QVariant retValue;	
-
-					
-					for (int i=0;i<areaSum[idx].size();i++)
-					{
-						if (idx == 0) QMetaObject::invokeMethod(qchartView, "createXYPoint1", Q_RETURN_ARG(QVariant, retValue), Q_ARG(QVariant, i), Q_ARG(QVariant,areaSum[idx][i]));
-						if (idx == 1) QMetaObject::invokeMethod(qchartView, "createXYPoint2", Q_RETURN_ARG(QVariant, retValue), Q_ARG(QVariant, i), Q_ARG(QVariant,areaSum[idx][i]));
-						if (idx == 2) QMetaObject::invokeMethod(qchartView, "createXYPoint3", Q_RETURN_ARG(QVariant, retValue), Q_ARG(QVariant, i), Q_ARG(QVariant,areaSum[idx][i]));	
-					}
-					qDebug()<<retValue.toString();
-				}
-				
-					qDebug()<<"qchart is fixed";
-				
+				qDebug()<<"qchart is fixed";
 				break;
 			}
         default:
