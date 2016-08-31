@@ -12,6 +12,8 @@ CameraInteractor::CameraInteractor(NcMapView *mv, SimpleCamera *cam) :
     view(mv), baseCamera(cam), action(-1)
 {
 	this->rectangle_flag = false;
+	this->rectangle_idx = 0;
+
 }
 
 CameraInteractor::~CameraInteractor()
